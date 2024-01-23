@@ -13,6 +13,17 @@ spring:
     password: 1234
   thymeleaf:
     cache: false
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: dlwdjwnj1114@gmail.com
+      password: your-email-password
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
 
 # spring data jpa 설정
 jpa:
