@@ -1,0 +1,27 @@
+# 서버 포트 설정
+server:
+  port: 8083
+
+# database 연동 설정
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/university?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 1234
+  thymeleaf:
+    cache: false
+
+# spring data jpa 설정
+jpa:
+  database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  open-in-view: false
+  show-sql: true
+  hibernate:
+    ddl-auto: update
+
+jwt:
+  secret: 847c7696811c1277de7cf2074712c4ee72b1cba9eb2560ee6b16b47abe5d1212
+
