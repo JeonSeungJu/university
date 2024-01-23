@@ -1,0 +1,30 @@
+/* MainPage.css */
+
+.main-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    width: 100%;
+    background-color: #008080; /* 청록색 */
+    color: #FFF; /* 흰색 텍스트 */
+    text-align: center;
+    padding: 20px;
+    position: absolute; /* 수정된 부분 */
+  }
+  
+  .main-button {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #008080; /* 네모칸과 동일한 색상 */
+    color: #FFF; /* 흰색 텍스트 */
+    border: none;
+    cursor: pointer;
+  }
+  

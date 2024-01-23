@@ -1,0 +1,66 @@
+  /* ContactForm.css */
+  .contact-form-container {
+    max-width: 800px; /* 좌우 길이를 늘리기 */
+    margin: 20px auto; /* 위아래 여백 20px, 좌우 중앙 정렬 */
+    padding: 20px;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .submit-button {
+    background-color: #2481A6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form-container.dragged {
+    transform: translateY(100%); /* 드래그 시 아래로 이동하도록 설정 */
+  }
+  .container h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  select,
+  input {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  textarea {
+    resize: vertical; /* 세로 리사이징만 가능하도록 설정 */
+    min-height: 160px; /* 최소 높이 설정 */
+    margin-bottom: 10px;
+  }
+  .placeholder-text {
+    font-style: italic;
+    color: #95a5a6;
+    margin-top: 5px;
+  }
+  .ConsultationSection {
+    display: flex;
+    background-color: #2481A6; /* 파란색 배경 */
+    color: #ffffff; /* 흰색 글자 */
+  }
+  
+  .TextContent {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  
+
+  
