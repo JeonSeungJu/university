@@ -1,0 +1,28 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [main] # main 브랜치에서 동작
+  release:
+    types: [push] # release를 push할 때 동작
+    
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Set up JDK 17.0.9
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17.0.9'
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
+      shell: bash
+
+    - name: Build with Gradle
+      run: ./gradlew clean build -x test
+      shell: bash
