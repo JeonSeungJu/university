@@ -32,7 +32,7 @@ task installReact(type: NodeTask) {
 	dependsOn npmInstall
 	description = 'Install frontend dependencies'
 	group = 'build'
-	script = file('path/to/installReactScript.js')
+	script = file('src/main/resources/static/scripts/installReactScript.js')
 }
 
 task buildReact(type: NodeTask) {
@@ -40,9 +40,8 @@ task buildReact(type: NodeTask) {
 	description = 'Build frontend'
 	group = 'build'
 	args = ['run-script', 'build']
-	script = file('path/to/buildReactScript.js')
+	script = file('src/main/resources/static/scripts/buildReactScript.js')
 }
-
 task copyReactBuildFiles(type: Copy) {
 	dependsOn buildReact
 	from 'src/main/reactfront/build'
