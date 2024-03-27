@@ -33,7 +33,7 @@ jobs:
       shell: bash
       
     - name: Build with npm
-      run: npm run build || true
+      run: npm run build --ignore-scripts || true
       shell: bash
 
     - name: Upload to S3
