@@ -11,6 +11,9 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+
+
+    
     align-items: center;
 }
 
@@ -21,7 +24,7 @@
 }
 
 .login-form-container input {
-    width: 100%; /* 입력 칸의 넓이를 꽉 채우도록 조절 */
+    width: 80%; /* 입력 칸의 넓이를 꽉 채우도록 조절 */
     padding: 10px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
@@ -30,7 +33,7 @@
 }
 
 .login-form-container button {
-    width: 100%; /* 로그인 버튼의 크기를 조절 */
+    width: 80%; /* 로그인 버튼의 크기를 조절 */
     background-color: #4caf50;
     color: white;
     padding: 10px;

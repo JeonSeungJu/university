@@ -1,13 +1,12 @@
 package com.codingrecipe.board.dto;
 
 import com.codingrecipe.board.entity.MemberEntity;
-import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,13 +23,14 @@ public class MemberDTO {
 
     private String managerName;
 
+    private List<String> roles;
     public static MemberDTO toMemberDTO(MemberEntity memberEntity) {
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setEmail(memberEntity.getEmail());
         memberDTO.setName(memberEntity.getName());
         memberDTO.setPhone(memberEntity.getPhone());
         memberDTO.setPassword(memberEntity.getPassword());
-        memberDTO.setManagerName(memberEntity.getManagerName());
+        memberDTO.setRoles(memberEntity.getRoles());
         return memberDTO;
     }
 

@@ -41,13 +41,17 @@ public class JwtTokenProvider {
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.joining(","));
 
-        long now = (new Date()).getTime();
+        // 사용자의 역할 정보 추가
+        String userRole = ((User) authentication.getPrincipal()).getAuthorities().iterator().next().getAuthority();
+
+        long now = System.currentTimeMillis();
 
         // Access Token 생성
         Date accessTokenExpiresIn = new Date(now + 86400000);
         String accessToken = Jwts.builder()
                 .setSubject(authentication.getName())
                 .claim("auth", authorities)
+                .claim("role", userRole)  // 역할 정보 추가
                 .setExpiration(accessTokenExpiresIn)
                 .signWith(SignatureAlgorithm.HS256, key)
                 .compact();
@@ -55,7 +59,7 @@ public class JwtTokenProvider {
         // Refresh Token 생성
         String refreshToken = Jwts.builder()
                 .setExpiration(new Date(now + 86400000))
-                .signWith(SignatureAlgorithm.HS256,key)
+                .signWith(SignatureAlgorithm.HS256, key)
                 .compact();
 
         return JwtToken.builder()

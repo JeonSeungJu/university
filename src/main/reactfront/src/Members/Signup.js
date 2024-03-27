@@ -8,7 +8,6 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [managerName, setManagerName] = useState('');
 
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -16,7 +15,7 @@ const Signup = () => {
   const [passwordError, setPasswordError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
   const [globalError, setGlobalError] = useState('');
-  const [managerNameError, setManagerNameError] = useState('');
+
   
   const navigate = useNavigate();
 
@@ -27,7 +26,6 @@ const Signup = () => {
 
   const validateInput = (name, value) => {
     const nameRegex = /^[가-힣a-zA-Z]+$/; // 한글 또는 영문자만 허용
-    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/; // 특수 기호 확인
   
     switch (name) {
       case 'email':
@@ -52,10 +50,6 @@ const Signup = () => {
         setName(value);
         setNameError(nameRegex.test(value) ? '' : '올바른 이름을 입력해주세요.');
         break;
-      case 'managerName':
-        setManagerName(value);
-        setManagerNameError(nameRegex.test(value) ? '' : '올바른 담당자 이름을 입력해주세요.');
-        break;
       default:
         break;
     }
@@ -69,7 +63,7 @@ const Signup = () => {
     }
 
     // 모든 입력 칸이 채워져 있는지 확인
-    if (!name || !phone || !email || !password || !confirmPassword || !managerName) {
+    if (!name || !phone || !email || !password || !confirmPassword) {
         setGlobalError('모든 칸을 채워주세요.');
         return;
     }
@@ -86,7 +80,6 @@ const Signup = () => {
                 email,
                 password,
                 confirmPassword,
-                managerName,
             }),
         });
 
@@ -140,14 +133,8 @@ const Signup = () => {
       </label>
       <br />
 
-      <label className="form-label">
-        담당자 이름<span style={{ color: 'red' }}>*</span>:
-        <input className="form-input" type="text" name="managerName" value={managerName} onChange={handleInputChange} />
-        {managerNameError && <p className="error-message">{managerNameError}</p>}
-      </label>
-      <br />
 
-      <button className="form-button" onClick={handleSignup} disabled={!!globalError || !name || !phone || !email || !password || !confirmPassword || !managerName}>
+      <button className="form-button" onClick={handleSignup} disabled={!!globalError || !name || !phone || !email || !password || !confirmPassword}>
             회원가입
         </button>
 

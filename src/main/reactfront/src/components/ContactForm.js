@@ -34,7 +34,10 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    if (!agree) {
+      console.error('개인정보 수집에 동의해야 제출할 수 있습니다.');
+      return;
+    }
     try {
       const formData = new FormData();
       formData.append('name', name);
@@ -46,7 +49,7 @@ const ContactForm = () => {
       formData.append('file', file);
       formData.append('agree', agree);
 
-      const response = await fetch('http://your-server-url/api/contact/submit', {
+      const response = await fetch('http://localhost:8083/api/contact/submit', {
         method: 'POST',
         body: formData,
       });

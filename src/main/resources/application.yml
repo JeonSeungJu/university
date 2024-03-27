@@ -4,6 +4,17 @@ server:
 
 # database 연동 설정
 spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
   datasource:
@@ -12,6 +23,11 @@ spring:
     username: root
     password: 1234
   thymeleaf:
+    servlet:
+      multipart:
+        max-file-size: 20MB
+        max-request-size: 20MB
+        location: C:/springboot_img/images/
     cache: false
     mail:
       host: smtp.gmail.com
@@ -25,13 +41,7 @@ spring:
             starttls:
               enable: true
 
-# spring data jpa 설정
-jpa:
-  database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-  open-in-view: false
-  show-sql: true
-  hibernate:
-    ddl-auto: update
+
 
 jwt:
   secret: 847c7696811c1277de7cf2074712c4ee72b1cba9eb2560ee6b16b47abe5d1212

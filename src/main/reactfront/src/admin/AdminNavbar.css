@@ -1,0 +1,51 @@
+/* AdminNavbar.css */
+
+.admin-navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 15px;
+  position: relative;
+}
+
+.admin-navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  position: relative;
+}
+
+.admin-navbar a:hover {
+  background-color: #555;
+}
+
+/* 수정된 부분: 드롭다운을 위한 스타일 추가 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #555;
+  min-width: 160px; /* 드롭다운 너비 설정 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+/* 수정된 부분: 드롭다운 활성화 시에 표시되도록 변경 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

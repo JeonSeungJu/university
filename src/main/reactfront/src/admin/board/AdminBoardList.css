@@ -1,0 +1,76 @@
+/* BoardList.css */
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.search-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 검색창 요소들을 우측으로 정렬합니다. */
+}
+
+.search-container select, .search-container input {
+  padding: 8px;
+  margin-right: 10px;
+  width: auto;
+}
+
+
+.common-table {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border-spacing: 0;
+}
+
+.common-table-header-column {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0;
+  font-size: 16px;
+  padding: 10px 5px;
+  font-weight: bold;
+}
+
+.common-table-row:hover {
+  background-color: #eceaea;
+  cursor: pointer;
+}
+
+.common-table-column {
+  padding: 10px 5px;
+}
+.pagination-container button.active {
+  background-color: #007bff;
+  color: white;
+  /* Add any other styles for the active state */
+}

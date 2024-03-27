@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/2.7.14/ad7d3be24a386ec45ce020b8922e9d056f7a6835/spring-boot-starter-data-jpa-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/2.7.14/80b80408b6b75ce0dc2833cb07fd1ce6620d1f3b/spring-boot-starter-jdbc-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/2.7.14/91a1934c6fae08a28665182ab802d41e0b44ffd/spring-boot-starter-thymeleaf-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-web:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/2.7.14/300b311c5fb98a2ee547df33a9d37782dddb496e/spring-boot-starter-web-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-test:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/2.7.14/271dd314bbd13c71e45e8001cb7bb22e3495da83/spring-boot-starter-test-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/2.7.14/c4fb902f51ab09247de60c463761980d0d1a5888/spring-boot-starter-aop-2.7.14.jar" />
+  </library>
+  <library name="Gradle: jakarta.transaction:jakarta.transaction-api:1.3.3">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/jakarta.transaction/jakarta.transaction-api/1.3.3/c4179d48720a1e87202115fbed6089bdc4195405/jakarta.transaction-api-1.3.3.jar" />
+  </library>
+  <library name="Gradle: jakarta.persistence:jakarta.persistence-api:2.2.3">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/jakarta.persistence/jakarta.persistence-api/2.2.3/8f6ea5daedc614f07a3654a455660145286f024e/jakarta.persistence-api-2.2.3.jar" />
+  </library>
+  <library name="Gradle: org.hibernate:hibernate-core:5.6.15.Final">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.6.15.Final/ab14b7cef1fdff654ca81923048a6034d6c7cfa7/hibernate-core-5.6.15.Final.jar" />
+  </library>
+  <library name="Gradle: org.springframework.data:spring-data-jpa:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.7.14/d5f2e34cce48ed4d668e760db200e854cbbe4d87/spring-data-jpa-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-aspects:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/5.3.29/dbcf1c1ce847b0fb186b5dde18968c9a46900f28/spring-aspects-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/2.7.14/5506200907ff3c3458506a8e16866c684f28bdbd/spring-boot-starter-2.7.14.jar" />
+  </library>
+  <library name="Gradle: com.zaxxer:HikariCP:4.0.3">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/4.0.3/107cbdf0db6780a065f895ae9d8fbf3bb0e1c21f/HikariCP-4.0.3.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-jdbc:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/5.3.29/25c0b36f780af98b2d3b554e9a6258ac599b6115/spring-jdbc-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.thymeleaf:thymeleaf-spring5:3.0.15.RELEASE">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf-spring5/3.0.15.RELEASE/7170e1bcd1588d38c139f7048ebcc262676441c3/thymeleaf-spring5-3.0.15.RELEASE.jar" />
+  </library>
+  <library name="Gradle: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.thymeleaf.extras/thymeleaf-extras-java8time/3.0.4.RELEASE/36e7175ddce36c486fff4578b5af7bb32f54f5df/thymeleaf-extras-java8time-3.0.4.RELEASE.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-json:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-json/2.7.14/34fbe387993dafef8b2c29516ebe54fec7108181/spring-boot-starter-json-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/2.7.14/e203b8792f4bcfaa1d07956adb6dee7014a20881/spring-boot-starter-tomcat-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-webmvc:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/5.3.29/fdaefee29fcb8459aab748b571d8bb7bb7fdb175/spring-webmvc-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-web:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.29/4cd333e48d9a05d05c05ae7426242ecfe4cfb681/spring-web-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.7.14/18fea4b54ebfe87a91c69fa9931c374f67d20e77/spring-boot-test-autoconfigure-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-test:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/2.7.14/d6bca0cd863734c070c788b8228d8a7200209c5c/spring-boot-test-2.7.14.jar" />
+  </library>
+  <library name="Gradle: com.jayway.jsonpath:json-path:2.7.0">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.7.0/f9d7d9659f2694e61142046ff8a216c047f263e8/json-path-2.7.0.jar" />
+  </library>
+  <library name="Gradle: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/48e3b9cfc10752fba3521d6511f4165bea951801/jakarta.xml.bind-api-2.3.3.jar" />
+  </library>
+  <library name="Gradle: org.assertj:assertj-core:3.22.0">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.22.0/c300c0c6a24559f35fa0bd3a5472dc1edcd0111e/assertj-core-3.22.0.jar" />
+  </library>
+  <library name="Gradle: org.hamcrest:hamcrest:2.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/1820c0968dba3a11a1b30669bb1f01978a91dedc/hamcrest-2.2.jar" />
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter:5.8.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.8.2/5a817b1e63f1217e5c586090c45e681281f097ad/junit-jupiter-5.8.2.jar" />
+  </library>
+  <library name="Gradle: org.mockito:mockito-junit-jupiter:4.5.1">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/4.5.1/f81fb60bd69b3a6e5537ae23b883326f01632a61/mockito-junit-jupiter-4.5.1.jar" />
+  </library>
+  <library name="Gradle: org.mockito:mockito-core:4.5.1">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.5.1/ed456e623e5afc6f4cee3ae58144e5c45f3b3bf/mockito-core-4.5.1.jar" />
+  </library>
+  <library name="Gradle: org.skyscreamer:jsonassert:1.5.1">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.5.1/6d842d0faf4cf6725c509a5e5347d319ee0431c3/jsonassert-1.5.1.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-test:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.3.29/dc55cc20f39ba89b46d59aa948c818c642da1848/spring-test-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-core:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.3.29/528eafe4cef7bccf3df290dd99ac5833a9756183/spring-core-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.xmlunit:xmlunit-core:2.9.1">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.9.1/e5833662d9a1279a37da3ef6f62a1da29fcd68c4/xmlunit-core-2.9.1.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-aop:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.3.29/397c588ce63ba4c185a8c1bd2f1e9139075b3bf1/spring-aop-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.aspectj:aspectjweaver:1.9.7">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.7/158f5c255cd3e4408e795b79f7c3fbae9b53b7ca/aspectjweaver-1.9.7.jar" />
+  </library>
+  <library name="Gradle: org.glassfish.jaxb:jaxb-runtime:2.3.8">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.8/c90a335a07c60db986f29d35b0f8ac0a18f0f989/jaxb-runtime-2.3.8.jar" />
+  </library>
+  <library name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.1.2.Final">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.1.2.Final/e59ffdbc6ad09eeb33507b39ffcf287679a498c8/hibernate-commons-annotations-5.1.2.Final.jar" />
+  </library>
+  <library name="Gradle: org.jboss.logging:jboss-logging:3.4.3.Final">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.4.3.Final/c4bd7e12a745c0e7f6cf98c45cdcdf482fd827ea/jboss-logging-3.4.3.Final.jar" />
+  </library>
+  <library name="Gradle: net.bytebuddy:byte-buddy:1.12.23">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.23/d470526e8c4566c04e9ae5d3ccb62d1a7aa58986/byte-buddy-1.12.23.jar" />
+  </library>
+  <library name="Gradle: antlr:antlr:2.7.7">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar" />
+  </library>
+  <library name="Gradle: org.jboss:jandex:2.4.2.Final">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/2.4.2.Final/1e1c385990b258ff1a24c801e84aebbacf70eb39/jandex-2.4.2.Final.jar" />
+  </library>
+  <library name="Gradle: com.fasterxml:classmate:1.5.1">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.5.1/3fe0bed568c62df5e89f4f174c101eab25345b6c/classmate-1.5.1.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-orm:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/5.3.29/83953e2af9c1848227239b4695c7596a0f112da3/spring-orm-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-context:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.3.29/c374a72716d19220ca142efaab910adf5717c5d0/spring-context-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework.data:spring-data-commons:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.7.14/c8c4825d930c9615bc7c9b42f433c9c14761fcaa/spring-data-commons-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-tx:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/5.3.29/dd26c6e31db036c3f96c24e8ff3b769a00dfc999/spring-tx-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-beans:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.3.29/be40f557f3fa52c703f00e127ff639f8cf499617/spring-beans-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.slf4j:slf4j-api:1.7.36">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/6c62681a2f655b49963a5983b8b0950a6120ae14/slf4j-api-1.7.36.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.7.14/4851957607f74fc4335858d66fb755f1b0c95006/spring-boot-autoconfigure-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.14/762261093a3e15388216c45d6a9ba7fdc022b74d/spring-boot-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.7.14/ea9c060fd1e4d17cdd8a9ba3dec8076c17d22a23/spring-boot-starter-logging-2.7.14.jar" />
+  </library>
+  <library name="Gradle: jakarta.annotation:jakarta.annotation-api:1.3.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/59eb84ee0d616332ff44aba065f3888cf002cd2d/jakarta.annotation-api-1.3.5.jar" />
+  </library>
+  <library name="Gradle: org.yaml:snakeyaml:1.30">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.30/8fde7fe2586328ac3c68db92045e1c8759125000/snakeyaml-1.30.jar" />
+  </library>
+  <library name="Gradle: org.thymeleaf:thymeleaf:3.0.15.RELEASE">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf/3.0.15.RELEASE/13e3296a03d8a597b734d832ed8656139bf9cdd8/thymeleaf-3.0.15.RELEASE.jar" />
+  </library>
+  <library name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.13.5/8ba3b868e81d7fc6ead686bd2353859b111d9eaf/jackson-datatype-jsr310-2.13.5.jar" />
+  </library>
+  <library name="Gradle: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-parameter-names/2.13.5/a401a99e7a45450fd3ef76e82ba39005fd1a8c22/jackson-module-parameter-names-2.13.5.jar" />
+  </library>
+  <library name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.13.5/1278f38160812811c56eb77f67213662ed1c7a2e/jackson-datatype-jdk8-2.13.5.jar" />
+  </library>
+  <library name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.13.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.5/aa95e46dbc32454f3983221d420e78ef19ddf844/jackson-databind-2.13.5.jar" />
+  </library>
+  <library name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.78">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/9.0.78/3d389e849edf92d5bc6a778a47428581773af3d6/tomcat-embed-websocket-9.0.78.jar" />
+  </library>
+  <library name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:9.0.78">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/9.0.78/ff73a2003d4b066b9affdc70827f6e8d282ab723/tomcat-embed-core-9.0.78.jar" />
+  </library>
+  <library name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:9.0.78">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/9.0.78/a39a2f2839516a5d3c05a4c0d7d1252a114a5b91/tomcat-embed-el-9.0.78.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-expression:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.3.29/44ac795a057c4a6360063801c54a2d148e5a2808/spring-expression-5.3.29.jar" />
+  </library>
+  <library name="Gradle: net.minidev:json-smart:2.4.11">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.4.11/cc5888f14a5768f254b97bafe8b9fd29b31e872e/json-smart-2.4.11.jar" />
+  </library>
+  <library name="Gradle: jakarta.activation:jakarta.activation-api:1.2.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/99f53adba383cb1bf7c3862844488574b559621f/jakarta.activation-api-1.2.2.jar" />
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter-params:5.8.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.8.2/ddeafe92fc263f895bfb73ffeca7fd56e23c2cce/junit-jupiter-params-5.8.2.jar" />
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter-api:5.8.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.8.2/4c21029217adf07e4c0d0c5e192b6bf610c94bdc/junit-jupiter-api-5.8.2.jar" />
+  </library>
+  <library name="Gradle: net.bytebuddy:byte-buddy-agent:1.12.23">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.12.23/1cba11fdb72c383edacb909f79ae6870efd275e4/byte-buddy-agent-1.12.23.jar" />
+  </library>
+  <library name="Gradle: com.vaadin.external.google:android-json:0.0.20131108.vaadin1">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-jcl:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.29/4f84fbeec60adb1a50734b6077836e53844f0134/spring-jcl-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.glassfish.jaxb:txw2:2.3.8">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.8/66e0297f1196f0d15a776e699de1b8e6ac5d44dd/txw2-2.3.8.jar" />
+  </library>
+  <library name="Gradle: com.sun.istack:istack-commons-runtime:3.0.12">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.12/cbbe1a62b0cc6c85972e99d52aaee350153dc530/istack-commons-runtime-3.0.12.jar" />
+  </library>
+  <library name="Gradle: ch.qos.logback:logback-classic:1.2.12">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.12/d4dee19148dccb177a0736eb2027bd195341da78/logback-classic-1.2.12.jar" />
+  </library>
+  <library name="Gradle: org.apache.logging.log4j:log4j-to-slf4j:2.17.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-to-slf4j/2.17.2/17dd0fae2747d9a28c67bc9534108823d2376b46/log4j-to-slf4j-2.17.2.jar" />
+  </library>
+  <library name="Gradle: org.slf4j:jul-to-slf4j:1.7.36">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.36/ed46d81cef9c412a88caef405b58f93a678ff2ca/jul-to-slf4j-1.7.36.jar" />
+  </library>
+  <library name="Gradle: org.attoparser:attoparser:2.0.5.RELEASE">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.attoparser/attoparser/2.0.5.RELEASE/a93ad36df9560de3a5312c1d14f69d938099fa64/attoparser-2.0.5.RELEASE.jar" />
+  </library>
+  <library name="Gradle: org.unbescape:unbescape:1.1.6.RELEASE">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.unbescape/unbescape/1.1.6.RELEASE/7b90360afb2b860e09e8347112800d12c12b2a13/unbescape-1.1.6.RELEASE.jar" />
+  </library>
+  <library name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.13.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.5/136f77ab424f302c9e27230b4482e8000e142edf/jackson-annotations-2.13.5.jar" />
+  </library>
+  <library name="Gradle: com.fasterxml.jackson.core:jackson-core:2.13.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.5/d07c97d3de9ea658caf1ff1809fd9de930a286a/jackson-core-2.13.5.jar" />
+  </library>
+  <library name="Gradle: net.minidev:accessors-smart:2.4.11">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/2.4.11/245ceca7bdf3190fbb977045c852d5f3c8efece1/accessors-smart-2.4.11.jar" />
+  </library>
+  <library name="Gradle: org.apiguardian:apiguardian-api:1.1.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar" />
+  </library>
+  <library name="Gradle: org.junit.platform:junit-platform-commons:1.8.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.8.2/32c8b8617c1342376fd5af2053da6410d8866861/junit-platform-commons-1.8.2.jar" />
+  </library>
+  <library name="Gradle: org.opentest4j:opentest4j:1.2.0">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar" />
+  </library>
+  <library name="Gradle: ch.qos.logback:logback-core:1.2.12">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.2.12/1d8e51a698b138065d73baefb4f94531faa323cb/logback-core-1.2.12.jar" />
+  </library>
+  <library name="Gradle: org.apache.logging.log4j:log4j-api:2.17.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.17.2/f42d6afa111b4dec5d2aea0fe2197240749a4ea6/log4j-api-2.17.2.jar" />
+  </library>
+  <library name="Gradle: org.ow2.asm:asm:9.3">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.3/8e6300ef51c1d801a7ed62d07cd221aca3a90640/asm-9.3.jar" />
+  </library>
+  <library name="Gradle: com.mysql:mysql-connector-j:8.0.33">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.mysql/mysql-connector-j/8.0.33/9e64d997873abc4318620264703d3fdb6b02dd5a/mysql-connector-j-8.0.33.jar" />
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.8.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.8.2/c598b4328d2f397194d11df3b1648d68d7d990e3/junit-jupiter-engine-5.8.2.jar" />
+  </library>
+  <library name="Gradle: org.objenesis:objenesis:3.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.2/7fadf57620c8b8abdf7519533e5527367cb51f09/objenesis-3.2.jar" />
+  </library>
+  <library name="Gradle: com.sun.activation:jakarta.activation:1.2.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.sun.activation/jakarta.activation/1.2.2/74548703f9851017ce2f556066659438019e7eb5/jakarta.activation-1.2.2.jar" />
+  </library>
+  <library name="Gradle: org.junit.platform:junit-platform-engine:1.8.2">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.8.2/b737de09f19864bd136805c84df7999a142fec29/junit-platform-engine-1.8.2.jar" />
+  </library>
+  <library name="Gradle: org.springframework.security:spring-security-config:5.7.10">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.7.10/a70c03d16c209b836006ed1b58b5818286bfee00/spring-security-config-5.7.10.jar" />
+  </library>
+  <library name="Gradle: org.webjars:bootstrap:4.5.0">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.webjars/bootstrap/4.5.0/80c472598acca90a848e35731f95d2f806617c58/bootstrap-4.5.0.jar" />
+  </library>
+  <library name="Gradle: org.webjars:jquery:3.5.1">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.webjars/jquery/3.5.1/2392938e374f561c27c53872bdc9b6b351b6ba34/jquery-3.5.1.jar" />
+  </library>
+  <library name="Gradle: org.webjars:popper.js:1.16.0">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.webjars/popper.js/1.16.0/6fafd6e11cd1fb6f09cf769aa031d421ea26c619/popper.js-1.16.0.jar" />
+  </library>
+  <library name="Gradle: org.springframework.security:spring-security-crypto:5.7.10">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-crypto/5.7.10/5a2c4107b2287c654d82f2d6fec7a9683dfeb35c/spring-security-crypto-5.7.10.jar" />
+  </library>
+  <library name="Gradle: org.springframework.security:spring-security-core:5.7.10">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.7.10/2cfe7d1ae22eff5d18c86f00feae346789ec14/spring-security-core-5.7.10.jar" />
+  </library>
+  <library name="Gradle: org.springframework.security:spring-security-web:5.7.10">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/5.7.10/9c3445fe7b5933f856e1b8237d5f2a74a30c61d1/spring-security-web-5.7.10.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-security:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-security/2.7.14/bfad63e7348a3f4d76b36c5ae87a5c582175a159/spring-boot-starter-security-2.7.14.jar" />
+  </library>
+  <library name="Gradle: org.projectlombok:lombok:1.18.22">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.22/9c08ea24c6eb714e2d6170e8122c069a0ba9aacf/lombok-1.18.22.jar" />
+  </library>
+  <library name="Gradle: org.springframework:spring-context-support:5.3.29">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/5.3.29/49e4290bbf62177c3323365fbb4a16adb06095a5/spring-context-support-5.3.29.jar" />
+  </library>
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-mail:2.7.14">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-mail/2.7.14/88d0a5dcfb139f9d90a2c1535ac3ca5c868adf19/spring-boot-starter-mail-2.7.14.jar" />
+  </library>
+  <library name="Gradle: io.jsonwebtoken:jjwt-impl:0.11.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt-impl/0.11.5/40a599f0e8a8e4e0701596fbb15e67bfda64fdf0/jjwt-impl-0.11.5.jar" />
+  </library>
+  <library name="Gradle: io.jsonwebtoken:jjwt-jackson:0.11.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt-jackson/0.11.5/3b83a06809e98a69402d7333dcf67df6f6ea4579/jjwt-jackson-0.11.5.jar" />
+  </library>
+  <library name="Gradle: io.jsonwebtoken:jjwt-api:0.11.5">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt-api/0.11.5/f742940045619d06383e7df37b21ac422b476cf1/jjwt-api-0.11.5.jar" />
+  </library>
+  <library name="Gradle: com.sun.mail:jakarta.mail:1.6.7">
+    <archive path="C:/Users/win/.gradle/caches/modules-2/files-2.1/com.sun.mail/jakarta.mail/1.6.7/319df0e9d536c1a01acdfe49b6e82b97d2393073/jakarta.mail-1.6.7.jar" />
+  </library>
+</eclipse-userlibraries>
+
