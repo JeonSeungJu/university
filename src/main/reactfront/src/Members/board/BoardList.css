@@ -1,0 +1,69 @@
+/* BoardList.css */
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.search-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 검색창 요소들을 우측으로 정렬합니다. */
+}
+
+.search-container select, .search-container input {
+  padding: 8px;
+  margin-right: 10px;
+  width: auto;
+}
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination span {
+  cursor: pointer;
+  padding: 8px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pagination span.active {
+  background-color: #007bff;
+  color: #fff;
+}
+

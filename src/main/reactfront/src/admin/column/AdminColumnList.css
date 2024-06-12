@@ -1,0 +1,103 @@
+
+.column-list-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.write-button, .delete-mode-button, .delete-selected-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.column-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column-card-container {
+  display: flex;
+  align-items: center;
+}
+
+.delete-checkbox {
+  margin-right: 10px;
+}
+
+.column-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-card-image {
+  flex-shrink: 0;
+}
+
+.circle-image img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.column-card-content {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.column-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.column-category, .column-author-date {
+  font-size: 14px;
+  color: #555;
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-container .pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.pagination-container .pagination .active a {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination-container .pagination .active a:hover {
+  background-color: #0056b3;
+  color: #fff;
+  border-color: #0056b3;
+}

@@ -1,0 +1,16 @@
+.consultation-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* 원하는 패딩 값으로 조절하세요 */
+    background-color: #2481A6; /* 원하는 배경색으로 조절하세요 */
+    margin: auto;
+    margin-top: 20px; 
+  }
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    color: white; /* 흰색으로 설정 */
+
+  }
+  

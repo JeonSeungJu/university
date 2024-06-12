@@ -1,0 +1,92 @@
+
+
+
+.column-list-container {
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .write-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .write-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .column-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .column-card {
+    display: flex;
+    width: calc(100% - 20px); /* 가로 길이 - 여백 */
+    max-width: 800px; /* 최대 가로 길이 */
+    height: 250px; /* 세로 길이 */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .column-card-content {
+    flex: 1; /* 수정: 이미지와 비율 조정 */
+    padding: 20px;
+    background-color: #fff; /* 텍스트 백그라운드 흰색 */
+  }
+  
+  .column-card-image {
+    flex: 1; /* 수정: 이미지와 비율 조정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* 이미지 백그라운드 흰색 */
+  }
+  
+  .circle-image {
+    width: 150px; /* 동그라미의 지름 */
+    height: 150px; /* 동그라미의 지름 */
+    border-radius: 50%; /* 동그라미 모양 */
+    overflow: hidden;
+  }
+  
+  .circle-image img {
+    width: auto; /* 이미지 가로 길이 자동 조정 */
+    height: 100%; /* 이미지 세로 길이 100% */
+  }
+  
+  .column-title {
+    font-weight: bold;
+    margin: 0 0 20px; /* 여백을 늘림 */
+  }
+  
+  .column-category {
+    font-size: 0.9em;
+    color: #aaa;
+    margin: 0 0 5px;
+  }
+  
+  .column-author-date {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 0 20px; /* 카테고리와 작성자/날짜 사이의 여백 추가 */
+  }
+  
+  .column-content {
+    margin-top: 10px;
+  }
+  

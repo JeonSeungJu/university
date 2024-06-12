@@ -1,0 +1,68 @@
+.login-form-container {
+    text-align: center;
+    margin: 20px;
+    padding: 0 20px; /* 좌우 여백 설정 */
+}
+
+.login-form-container h2 {
+    color: #333;
+}
+
+.login-form-container form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-container label {
+    display: block;
+    margin-bottom: 12px; /* 입력 칸과 라벨 사이의 여백 조절 */
+    width: 80%; /* 입력 칸의 너비를 조절 */
+}
+
+.login-form-container input {
+    width: 100%; /* 입력 칸의 너비를 조절 */
+    padding: 10px;
+    margin-bottom: 20px; /* 입력 칸 간의 간격 조절 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form-container button {
+    width: 80%; /* 로그인 버튼의 너비를 조절 */
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; /* 로그인 버튼과 이전 요소 사이의 여백 조절 */
+    margin-bottom: 20px; /* 로그인 버튼과 다음 요소 사이의 여백 조절 */
+}
+
+.login-form-container button:hover {
+    background-color: #45a049;
+}
+
+.login-form-container .auto-login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.login-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* 버튼이 가로로 넘칠 경우 줄 바꿈 */
+}
+
+.login-buttons button {
+    margin: 5px; /* 각 버튼 간의 간격 조절 */
+    padding: 8px;
+    font-size: 14px;
+}

@@ -1,0 +1,63 @@
+.board-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea,
+.ql-editor {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+textarea,
+.ql-editor {
+  min-height: 150px; /* 높이를 조절하여 내용 영역 크기 조절 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #2481a6;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.checkbox-container label {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+
+

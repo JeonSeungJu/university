@@ -1,0 +1,38 @@
+
+
+/* AdminReviewList.css */
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.review-card {
+  display: flex;
+  width: 500px;
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-card-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-card-image img {
+  border-radius: 50%;
+  width: 80%;
+  height: auto;
+}
+
+.review-card-content {
+  flex: 2;
+  padding: 20px;
+  background-color: #fff;
+}
+

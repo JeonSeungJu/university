@@ -1,0 +1,52 @@
+name: Deploy React
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  S3_BUCKET_NAME : my-reacts
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@master
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-master-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+
+      - name : npm install
+        run : npm install
+        working-directory: ./src/main/reactfront
+
+      - name : build
+        run : npm run build
+        working-directory: ./src/main/reactfront
+
+        env:
+          CI: ""
+
+      - name: Configure AWS credentials
+        uses: aws-action/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Upload to S3
+        run: |
+          aws s3 cp \
+            --recursive \
+            --region ap-northeast-2 \
+            ./src/main/reactfront/build s3://$S3_BUCKET_NAME

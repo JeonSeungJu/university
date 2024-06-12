@@ -1,0 +1,33 @@
+/* TopNavbar.css */
+
+.top-navbar {
+  background-color: #2481A6;
+  color: #fff;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: flex-end; /* 우측 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none; /* 리스트 마커 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+/* ... 나머지 스타일 ... */
