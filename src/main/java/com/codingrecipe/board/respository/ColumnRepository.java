@@ -13,7 +13,6 @@ public interface ColumnRepository extends JpaRepository<ColumnEntity, Long> {
     Page<ColumnEntity> findByContentContaining(String value, Pageable pageable);
 
     Page<ColumnEntity> findByAuthorContaining(String value, Pageable pageable);
-    @Query("SELECT b FROM ColumnEntity b WHERE b.title LIKE %:value% OR b.content LIKE %:value% OR b.author LIKE %:value%")
-    Page<ColumnEntity> findByAllContaining(@Param("value") String value, Pageable pageable);
+    Page<ColumnEntity> findByTitleContainingOrContentContainingOrAuthorContaining(String title, String content, String author, Pageable pageable);
 
 }

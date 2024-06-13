@@ -106,7 +106,6 @@ function App() {
              <Route path="/columnForm/" element={<AdminColumnForm/>} />
              <Route path="/column/" element={<AdminColumnList/>} />
              <Route path="/columndetail/:id" element={<AdminColumnDetail />} />
-             
            </>
             )}
           </Routes>

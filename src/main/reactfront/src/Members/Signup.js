@@ -16,7 +16,6 @@ const Signup = () => {
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
   const [globalError, setGlobalError] = useState('');
 
-  
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
@@ -27,7 +26,7 @@ const Signup = () => {
   const validateInput = (name, value) => {
     const nameRegex = /^[가-힣a-zA-Z]+$/; // 한글 또는 영문자만 허용
     const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/; // 특수 기호 확인
-  
+
     switch (name) {
       case 'email':
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -55,51 +54,51 @@ const Signup = () => {
         break;
     }
   };
-  
 
   const handleSignup = async () => {
     if (emailError || phoneError || passwordError || confirmPasswordError) {
-        setGlobalError('양식을 올바르게 입력해주세요.');
-        return;
+      setGlobalError('양식을 올바르게 입력해주세요.');
+      return;
     }
 
     // 모든 입력 칸이 채워져 있는지 확인
     if (!name || !phone || !email || !password || !confirmPassword) {
-        setGlobalError('모든 칸을 채워주세요.');
-        return;
+      setGlobalError('모든 칸을 채워주세요.');
+      return;
     }
 
     try {
-        const response = await fetch('http://3.106.45.125:8080/api/members/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name,
-                phone,
-                email,
-                password,
-                confirmPassword,
-            }),
-        });
+      const response = await fetch('http://3.106.45.125:8080/api/members/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          password,
+          confirmPassword,
+        }),
+      });
 
-        if (response.ok) {
-            // 성공적으로 저장된 경우의 처리
-            setGlobalError('회원가입이 성공적으로 완료되었습니다.');
-        } else {
-            // 저장 실패 시의 처리
-            setGlobalError('회원가입에 실패했습니다.');
-        }
-      } catch (error) {
-          console.error('회원가입 중 오류 발생:', error);
-          setGlobalError('서버와의 통신 중 오류가 발생했습니다.');
+      if (response.ok) {
+        // 성공적으로 저장된 경우의 처리
+        setGlobalError('회원가입이 성공적으로 완료되었습니다.');
+        navigate('/'); // 회원가입 성공 시 / 경로로 이동
+      } else {
+        // 저장 실패 시의 처리
+        setGlobalError('회원가입에 실패했습니다.');
       }
+    } catch (error) {
+      console.error('회원가입 중 오류 발생:', error);
+      setGlobalError('서버와의 통신 중 오류가 발생했습니다.');
+    }
   };
 
   return (
     <div className="signup-container">
-     <label className="form-label">
+      <label className="form-label">
         이름<span style={{ color: 'red' }}>*</span>:
         <input className="form-input" type="text" name="name" value={name} onChange={handleInputChange} />
         {nameError && <p className="error-message">{nameError}</p>}
@@ -134,19 +133,18 @@ const Signup = () => {
       </label>
       <br />
 
-
       <button className="form-button" onClick={handleSignup} disabled={!!globalError || !name || !phone || !email || !password || !confirmPassword}>
-            회원가입
-        </button>
+        회원가입
+      </button>
 
-        {globalError && (
-            <div className="error-popup">
-                <p>{globalError}</p>
-                <button onClick={() => setGlobalError('')}>닫기</button>
-            </div>
-        )}
+      {globalError && (
+        <div className="error-popup">
+          <p>{globalError}</p>
+          <button onClick={() => setGlobalError('')}>닫기</button>
+        </div>
+      )}
     </div>
   );
-        }
+}
 
 export default Signup;

@@ -277,10 +277,12 @@ public class BoardService {
                 boardPage = boardRepository.findByWriterContaining(value, pageable);
                 break;
             case "all":
-                boardPage = boardRepository.findByAllContaining(value, pageable);
+                boardPage = boardRepository.findByTitleContainingOrContentContainingOrWriterContaining(value,value,value, pageable);
+                break;
             default:
                 break;
         }
+
 
         return boardPage != null ? convertBoardPageToMapList(boardPage) : null;
     }
@@ -347,7 +349,7 @@ public class BoardService {
             case "author":
                 boardPage = columnRepository.findByAuthorContaining(value, pageable);
             case "all":
-                boardPage = columnRepository.findByAllContaining(value, pageable);
+                boardPage = columnRepository.findByTitleContainingOrContentContainingOrAuthorContaining(value,value,value, pageable);
             default:
                 break;
         }

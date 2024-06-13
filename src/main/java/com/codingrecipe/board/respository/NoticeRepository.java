@@ -14,6 +14,5 @@ public interface NoticeRepository  extends JpaRepository<NoticeEntity, Long> {
     Page<NoticeEntity> findByContentContaining(String value, Pageable pageable);
 
     Page<NoticeEntity> findByWriterContaining(String value, Pageable pageable);
-    @Query("SELECT b FROM BoardEntity b WHERE b.title LIKE %:value% OR b.content LIKE %:value% OR b.writer LIKE %:value%")
-    Page<NoticeEntity> findByAllContaining(@Param("value") String value, Pageable pageable);
+    Page<NoticeEntity> findByTitleContainingOrContentContainingOrWriterContaining(String title, String content, String writer, Pageable pageable);
 }

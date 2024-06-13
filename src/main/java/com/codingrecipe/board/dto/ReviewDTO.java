@@ -24,7 +24,7 @@ public class ReviewDTO {
     private String reviewContent;
     private MultipartFile file;
     private String imagePath;
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") // 날짜 형식 지정
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
     private Date createdAt;
     public static ReviewDTO toDTO(ReviewEntity reviewEntity) {
         ReviewDTO reviewDTO = new ReviewDTO();

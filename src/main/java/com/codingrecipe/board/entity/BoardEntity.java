@@ -28,7 +28,7 @@ public class BoardEntity {
     @Column
     private String password;
     @Column
-    private String Content;
+    private String content;
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;

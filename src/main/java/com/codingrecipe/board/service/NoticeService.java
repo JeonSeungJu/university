@@ -86,7 +86,7 @@ public class NoticeService {
                 boardPage = noticeRepository.findByWriterContaining(value, pageable);
                 break;
             case "all":
-                boardPage = noticeRepository.findByAllContaining(value, pageable);
+                boardPage = noticeRepository.findByTitleContainingOrContentContainingOrWriterContaining(value, value, value, pageable);
             default:
 
         }
