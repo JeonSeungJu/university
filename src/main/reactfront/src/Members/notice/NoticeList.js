@@ -21,9 +21,6 @@ const NoticeList = () => {
       .catch(error => console.error('Error fetching notices:', error));
   }, [currentPage]);
 
-  const handleWriteClick = () => {
-    navigate('/noticeform');
-  };
 
   const handlePostClick = (notice) => {
     navigate(`/noticeDetail/${notice.nid}`);
@@ -58,10 +55,6 @@ const NoticeList = () => {
 
   return (
     <div>
-      <div className="button-container">
-        <button onClick={handleWriteClick}>글쓰기</button>
-      </div>
-
       {notices.length === 0 ? (
         <p>공지사항이 없습니다.</p>
       ) : (
@@ -79,10 +72,10 @@ const NoticeList = () => {
             <tbody>
               {notices.map((notice) => (
               <tr key={notice.nid} onClick={() => handlePostClick(notice)}>
-                <td>{notice.nid}</td>
                 <td>{notice.title}</td>
                 <td>{notice.writer}</td>
                 <td>{new Intl.DateTimeFormat('ko-KR').format(new Date(notice.createdat))}</td>
+                <td>{notice.likes}</td>
                 <td>{notice.views}</td>
               </tr>
             ))}

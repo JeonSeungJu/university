@@ -93,10 +93,10 @@ const AdminNoticeBoard = () => {
             <tbody>
               {notices.map((notice) => (
               <tr key={notice.nid} onClick={() => handlePostClick(notice)}>
-                <td>{notice.nid}</td>
                 <td>{notice.title}</td>
                 <td>{notice.writer}</td>
                 <td>{new Intl.DateTimeFormat('ko-KR').format(new Date(notice.createdat))}</td>
+                <td>{notice.likes}</td>
                 <td>{notice.views}</td>
                 <td>
                   <button onClick={() => handleDelete(notice.nid)}>삭제</button>

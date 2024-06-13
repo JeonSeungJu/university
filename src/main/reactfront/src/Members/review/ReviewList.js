@@ -6,22 +6,23 @@ import axios from 'axios';
 import Pagination from 'react-js-pagination';
 import './ReviewList.css';
 
-const ReviewList = () => {
+
+const AdminReviewList = () => {
   const [reviews, setReviews] = useState([]);
   const [activePage, setActivePage] = useState(1);
-  const itemsPerPage = 5; // Number of items per page
+  const itemsPerPage = 5;
   const [totalItemsCount, setTotalItemsCount] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
-
-  const [showDeletePopup, setShowDeletePopup] = useState(false); // Control the visibility of the delete confirmation popup
-  const navigate = useNavigate(); // Use navigate hook
+  const [searchType, setSearchType] = useState('all'); // 추가: 검색 타입 상태
+  const [deleteId, setDeleteId] = useState(null);
+  const [showDeletePopup, setShowDeletePopup] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch data from the server
     const fetchReviews = async () => {
       try {
-        const response = await fetch(`http://3.106.45.125:8080/api/board/get-review?page=${activePage}&size=${itemsPerPage}&search=${searchQuery}`);
+        const response = await fetch(`http://3.106.45.125:8080/api/board/get-review?page=${activePage}&size=${itemsPerPage}&search=${searchQuery}&searchType=${searchType}`);
         if (!response.ok) {
           throw new Error('Failed to fetch reviews');
         }
@@ -35,7 +36,7 @@ const ReviewList = () => {
     };
 
     fetchReviews();
-  }, [activePage, searchQuery]); // Fetch data when activePage or searchQuery changes
+  }, [activePage, searchQuery, searchType]);
 
   const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
@@ -57,27 +58,49 @@ const ReviewList = () => {
     setSearchQuery(e.target.value);
   };
 
-  const handleSearch = () => {
-    // Fetch data with the updated searchQuery
-    setActivePage(1); // Reset activePage to 1 when performing a new search
+  const handleSearchTypeChange = (e) => {
+    setSearchType(e.target.value);
   };
+
+  const handleSearch = () => {
+    setActivePage(1);
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://3.106.45.125:8080/api/board/delete-review/${id}`);
+      setReviews(reviews.filter(review => review.rid !== id));
+      setDeleteId(null);
+      setShowDeletePopup(false);
+    } catch (error) {
+      console.error('Error deleting review:', error);
+    }
+  };
+
+
 
 
   return (
     <div className="app">
-      <div className="search-container">
+      <div className="search-container" style={{ display: 'flex', alignItems: 'center' }}>
+        <select value={searchType} onChange={handleSearchTypeChange}>
+          <option value="all">전체</option>
+          <option value="title">제목</option>
+          <option value="content">내용</option>
+        </select>
         <input 
           type="text" 
           placeholder="검색어를 입력하세요" 
           value={searchQuery} 
           onChange={handleSearchChange}
+          style={{ marginLeft: '10px' }}
         />
-        <button onClick={handleSearch}>검색</button>
+        <button onClick={handleSearch} style={{ marginLeft: '10px' }}>검색</button>
       </div>
 
       <div className="card-container">
         {reviews.map((review, index) => (
-          <Card key={index} review={review} />
+          <Card key={index} review={review} onDelete={handleDeleteClick} />
         ))}
       </div>
 
@@ -95,20 +118,24 @@ const ReviewList = () => {
         <button onClick={handleNextPage} disabled={activePage === totalPages}>다음</button>
       </div>
 
-      <button onClick={() => navigate('/reviewForm')}>리뷰 작성하기</button>
+    
     </div>
   );
 };
 
-function Card({ review }) {
-  const navigate = useNavigate(); // Add useNavigate hook here
+function Card({ review, onDelete }) {
+  const navigate = useNavigate();
 
   const handleImageError = (e) => {
-    e.target.src = '/path/to/default-image.jpg'; // Default image path
+    e.target.src = '/path/to/default-image.jpg';
     e.target.alt = '이미지를 로드할 수 없습니다.';
   };
+
+  // 날짜가 유효하지 않은 경우를 위해 예외 처리 추가
+  const formattedDate = review.createdat ? new Intl.DateTimeFormat('ko-KR').format(new Date(review.createdat)) : '날짜 없음';
+
   const handleCardClick = () => {
-    navigate(`/reviewdetail/${review.cid}`, { state: { editPath: `/reviewEdit/${review.cid}` } });
+    navigate(`/reviewdetail/${review.rid}`, { state: { editPath: `/reviewEdit/${review.rid}` } });
   };
 
   return (
@@ -121,24 +148,8 @@ function Card({ review }) {
         </div>
       )}
       <p className="title">{review.title}</p>
-      <p className="author">{review.mentorContent} / {new Intl.DateTimeFormat('ko-KR').format(new Date(review.createdat))}</p>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          navigate(`/reviewEdit/${review.cid}`);
-        }}
-        style={{ marginLeft: '10px' }}
-      >
-        수정
-      </button>
-      <button 
-        onClick={(e) => {
-          e.stopPropagation();
-        }} 
-        style={{ marginLeft: '10px' }}
-      >
-        삭제
-      </button>
+      <p className="author">{review.mentorContent} / {formattedDate}</p>
+ 
     </div>
   );
 }

@@ -26,7 +26,7 @@ const AdminNavbar = () => {
         <span onClick={handleCommunityToggle}>커뮤니티</span>
         {isCommunityOpen && (
           <div className="dropdown-content">
-            <Link to="/adminBoardList">상담게시판</Link>
+            <Link to="/Board">상담게시판</Link>
             <Link to="/notice">공지사항</Link>
             <Link to="/review">수강생 후기</Link>
             <Link to="/column">컬럼 작성</Link>

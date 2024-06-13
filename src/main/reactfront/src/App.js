@@ -93,8 +93,8 @@ function App() {
              <>
              <Route path="/" element={<AdminComponent />} />
              <Route path="/adminComponentMember" element={<AdminComponentMember />} />
-             <Route path="/adminBoardList" element={<AdminBoardList />} />
-             <Route path="/adminBoardDetail/:id" element={<AdminBoardDetail />} />
+             <Route path="/board" element={<AdminBoardList />} />
+             <Route path="/boardDetail/:id" element={<AdminBoardDetail />} />
              <Route path="/notice" element={<AdminNoticeBoard />} />
              <Route path="/noticeform" element={<AdminNoticeForm />} />
              <Route path="/noticeDetail/:id" element={<AdminNoticePage />} />

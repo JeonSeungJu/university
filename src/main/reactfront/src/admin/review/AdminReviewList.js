@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -8,19 +7,19 @@ import './AdminReviewList.css';
 const AdminReviewList = () => {
   const [reviews, setReviews] = useState([]);
   const [activePage, setActivePage] = useState(1);
-  const itemsPerPage = 5; // Number of items per page
+  const itemsPerPage = 5;
   const [totalItemsCount, setTotalItemsCount] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
-  const [deleteId, setDeleteId] = useState(null); // Track the id of the review to be deleted
-  const [showDeletePopup, setShowDeletePopup] = useState(false); // Control the visibility of the delete confirmation popup
-  const navigate = useNavigate(); // Use navigate hook
+  const [searchType, setSearchType] = useState('all'); // 추가: 검색 타입 상태
+  const [deleteId, setDeleteId] = useState(null);
+  const [showDeletePopup, setShowDeletePopup] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch data from the server
     const fetchReviews = async () => {
       try {
-        const response = await fetch(`http://3.106.45.125:8080/api/board/get-review?page=${activePage}&size=${itemsPerPage}&search=${searchQuery}`);
+        const response = await fetch(`http://3.106.45.125:8080/api/board/get-review?page=${activePage}&size=${itemsPerPage}&search=${searchQuery}&searchType=${searchType}`);
         if (!response.ok) {
           throw new Error('Failed to fetch reviews');
         }
@@ -34,7 +33,7 @@ const AdminReviewList = () => {
     };
 
     fetchReviews();
-  }, [activePage, searchQuery]); // Fetch data when activePage or searchQuery changes
+  }, [activePage, searchQuery, searchType]);
 
   const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
@@ -56,17 +55,20 @@ const AdminReviewList = () => {
     setSearchQuery(e.target.value);
   };
 
+  const handleSearchTypeChange = (e) => {
+    setSearchType(e.target.value);
+  };
+
   const handleSearch = () => {
-    // Fetch data with the updated searchQuery
-    setActivePage(1); // Reset activePage to 1 when performing a new search
+    setActivePage(1);
   };
 
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://3.106.45.125:8080/api/board/delete-review/${id}`);
-      setReviews(reviews.filter(review => review.cid !== id));
-      setDeleteId(null); // Reset deleteId state after successful deletion
-      setShowDeletePopup(false); // Close the delete confirmation popup
+      setReviews(reviews.filter(review => review.rid !== id));
+      setDeleteId(null);
+      setShowDeletePopup(false);
     } catch (error) {
       console.error('Error deleting review:', error);
     }
@@ -80,20 +82,26 @@ const AdminReviewList = () => {
   };
 
   const handleCancelDelete = () => {
-    setDeleteId(null); // Reset deleteId state
-    setShowDeletePopup(false); // Close the delete confirmation popup
+    setDeleteId(null);
+    setShowDeletePopup(false);
   };
 
   return (
     <div className="app">
-      <div className="search-container">
+      <div className="search-container" style={{ display: 'flex', alignItems: 'center' }}>
+        <select value={searchType} onChange={handleSearchTypeChange}>
+          <option value="all">전체</option>
+          <option value="title">제목</option>
+          <option value="content">내용</option>
+        </select>
         <input 
           type="text" 
           placeholder="검색어를 입력하세요" 
           value={searchQuery} 
           onChange={handleSearchChange}
+          style={{ marginLeft: '10px' }}
         />
-        <button onClick={handleSearch}>검색</button>
+        <button onClick={handleSearch} style={{ marginLeft: '10px' }}>검색</button>
       </div>
 
       <div className="card-container">
@@ -130,14 +138,18 @@ const AdminReviewList = () => {
 };
 
 function Card({ review, onDelete }) {
-  const navigate = useNavigate(); // Add useNavigate hook here
+  const navigate = useNavigate();
 
   const handleImageError = (e) => {
-    e.target.src = '/path/to/default-image.jpg'; // Default image path
+    e.target.src = '/path/to/default-image.jpg';
     e.target.alt = '이미지를 로드할 수 없습니다.';
   };
+
+  // 날짜가 유효하지 않은 경우를 위해 예외 처리 추가
+  const formattedDate = review.createdat ? new Intl.DateTimeFormat('ko-KR').format(new Date(review.createdat)) : '날짜 없음';
+
   const handleCardClick = () => {
-    navigate(`/reviewdetail/${review.cid}`, { state: { editPath: `/reviewEdit/${review.cid}` } });
+    navigate(`/reviewdetail/${review.rid}`, { state: { editPath: `/reviewEdit/${review.rid}` } });
   };
 
   return (
@@ -150,11 +162,11 @@ function Card({ review, onDelete }) {
         </div>
       )}
       <p className="title">{review.title}</p>
-      <p className="author">{review.mentorContent} / {new Intl.DateTimeFormat('ko-KR').format(new Date(review.createdat))}</p>
+      <p className="author">{review.mentorContent} / {formattedDate}</p>
       <button
         onClick={(e) => {
           e.stopPropagation();
-          navigate(`/reviewEdit/${review.cid}`);
+          navigate(`/reviewEdit/${review.rid}`);
         }}
         style={{ marginLeft: '10px' }}
       >
@@ -163,7 +175,7 @@ function Card({ review, onDelete }) {
       <button 
         onClick={(e) => {
           e.stopPropagation();
-          onDelete(review.cid);
+          onDelete(review.rid);
         }} 
         style={{ marginLeft: '10px' }}
       >
