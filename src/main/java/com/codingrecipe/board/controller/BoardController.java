@@ -204,6 +204,22 @@ public class BoardController {
         return ResponseEntity.ok(comments);
     }
 
+    @PutMapping("/update-comment/{id}")
+    public ResponseEntity<?> updateComment(@PathVariable Long id, @RequestBody CommentDTO commentDTO) {
+        Optional<CommentEntity> updatedComment = boardService.updateComment(id, commentDTO);
+        if (updatedComment.isPresent()) {
+            return ResponseEntity.ok(updatedComment.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/delete-comment/{id}")
+    public ResponseEntity<?> deleteComment(@PathVariable Long id) {
+        boardService.deleteComment(id);
+        return ResponseEntity.ok().build();
+    }
+
     @PostMapping("/save-notice")
     public ResponseEntity<String> saveNotice(@RequestBody NoticeDTO noticeDTO) {
         try {

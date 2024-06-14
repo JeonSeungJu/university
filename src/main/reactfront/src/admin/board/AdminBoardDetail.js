@@ -9,6 +9,8 @@ const AdminBoardDetail = () => {
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  const [editingCommentId, setEditingCommentId] = useState(null);
+  const [editingCommentContent, setEditingCommentContent] = useState('');
 
   const fetchComments = async () => {
     try {
@@ -86,6 +88,57 @@ const AdminBoardDetail = () => {
     }
   };
 
+  const handleCommentEdit = (commentId) => {
+    const comment = comments.find((comment) => comment.id === commentId);
+    if (comment) {
+      setEditingCommentId(commentId);
+      setEditingCommentContent(comment.content);
+    }
+  };
+
+  const handleCommentUpdate = async () => {
+    try {
+      const response = await fetch(`http://3.106.45.125:8080/api/board/update-comment/${editingCommentId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          content: editingCommentContent,
+          updatedAt: new Date().toISOString(), // 현재 시간을 ISO 문자열로 변환하여 전송
+        }),
+      });
+
+      if (response.ok) {
+        // 댓글이 성공적으로 업데이트되면 댓글 목록을 다시 불러옴
+        fetchComments();
+        setEditingCommentId(null);
+        setEditingCommentContent('');
+      } else {
+        console.error('Error updating comment. Server response:', response);
+      }
+    } catch (error) {
+      console.error('Error updating comment:', error);
+    }
+  };
+
+  const handleCommentDelete = async (commentId) => {
+    try {
+      const response = await fetch(`http://3.106.45.125:8080/api/board/delete-comment/${commentId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        // 댓글이 성공적으로 삭제되면 댓글 목록을 다시 불러옴
+        fetchComments();
+      } else {
+        console.error('Error deleting comment. Server response:', response);
+      }
+    } catch (error) {
+      console.error('Error deleting comment:', error);
+    }
+  };
+
   // id 값이 null이면 렌더링을 하지 않음
   if (!id) {
     return <p>No ID provided</p>;
@@ -112,14 +165,29 @@ const AdminBoardDetail = () => {
             />
             <button onClick={handleCommentSubmit}>댓글 작성</button>
           </div>
-          {comments.map((comment, index) => (
+          {comments.map((comment) => (
             <React.Fragment key={comment.id}>
-              <div className="comment-header">
-                <p className="comment-writer">{comment.writer}</p>
-                <p className="comment-date">{new Date(comment.createdAt).toLocaleString()}</p>
-              </div>
-              <p className="comment-content">{comment.content}</p>
-              {index !== comments.length - 1 && <hr className="comment-divider" />}
+              {editingCommentId === comment.id ? (
+                <div className="comment-editing">
+                  <textarea
+                    value={editingCommentContent}
+                    onChange={(e) => setEditingCommentContent(e.target.value)}
+                  />
+                  <button onClick={handleCommentUpdate}>저장</button>
+                  <button onClick={() => setEditingCommentId(null)}>취소</button>
+                </div>
+              ) : (
+                <>
+                  <div className="comment-header">
+                    <p className="comment-writer">{comment.writer}</p>
+                    <p className="comment-date">{new Date(comment.createdAt).toLocaleString()}</p>
+                  </div>
+                  <p className="comment-content">{comment.content}</p>
+                  <button onClick={() => handleCommentEdit(comment.id)}>수정</button>
+                  <button onClick={() => handleCommentDelete(comment.id)}>삭제</button>
+                  <hr className="comment-divider" />
+                </>
+              )}
             </React.Fragment>
           ))}
         </>

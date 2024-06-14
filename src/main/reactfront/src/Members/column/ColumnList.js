@@ -81,9 +81,6 @@ const ColumnList = () => {
 
   return (
     <div className="column-list-container">
-      <div className="button-container">
-        <button onClick={handleWriteClick}>글쓰기</button>
-      </div>
       <div className="search-container">
         <select value={searchOption} onChange={(e) => setSearchOption(e.target.value)}>
           <option value="all">전체</option>

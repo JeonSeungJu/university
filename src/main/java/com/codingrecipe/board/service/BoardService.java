@@ -5,6 +5,7 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.codingrecipe.board.dto.BoardDTO;
 import com.codingrecipe.board.dto.ColumnDTO;
+import com.codingrecipe.board.dto.CommentDTO;
 import com.codingrecipe.board.entity.*;
 import com.codingrecipe.board.respository.*;
 import lombok.RequiredArgsConstructor;
@@ -385,5 +386,16 @@ public class BoardService {
         return contentList;
     }
 
+    public Optional<CommentEntity> updateComment(Long id, CommentDTO commentDTO) {
+        return commentRepository.findById(id).map(comment -> {
+            comment.setContent(commentDTO.getContent());
+            comment.setWriter(commentDTO.getWriter());
+            return commentRepository.save(comment);
+        });
+    }
+
+    public void deleteComment(Long id) {
+        commentRepository.deleteById(id);
+    }
 }
 

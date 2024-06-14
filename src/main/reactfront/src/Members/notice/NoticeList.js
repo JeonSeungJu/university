@@ -58,10 +58,20 @@ const NoticeList = () => {
 
   return (
     <div>
-      <div className="button-container">
-        <button onClick={handleWriteClick}>글쓰기</button>
+      <div className="search-container">
+        <select value={searchOption} onChange={(e) => setSearchOption(e.target.value)}>
+          <option value="title">제목</option>
+          <option value="writer">작성자</option>
+          {/* 다른 검색 옵션 추가 */}
+        </select>
+        <input
+          type="text"
+          placeholder="검색어를 입력하세요"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+        />
+        <button onClick={handleSearch}>검색</button>
       </div>
-
       {notices.length === 0 ? (
         <p>공지사항이 없습니다.</p>
       ) : (
@@ -104,20 +114,7 @@ const NoticeList = () => {
         </div>
       )}
       
-      <div className="search-container">
-        <select value={searchOption} onChange={(e) => setSearchOption(e.target.value)}>
-          <option value="title">제목</option>
-          <option value="writer">작성자</option>
-          {/* 다른 검색 옵션 추가 */}
-        </select>
-        <input
-          type="text"
-          placeholder="검색어를 입력하세요"
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-        />
-        <button onClick={handleSearch}>검색</button>
-      </div>
+  
     </div>
   );
 };
