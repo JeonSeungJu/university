@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams, useLocation } from 'react-router-dom';
+import { Link, useParams, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './AdminReviewDetail.css';
 
 const AdminReviewDetail = () => {
   const { id } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const [review, setReview] = useState(null);
 
   useEffect(() => {
@@ -39,6 +40,7 @@ const AdminReviewDetail = () => {
 
   return (
     <div>
+      <button onClick={() => navigate(-1)}>뒤로가기</button>
       <h2>학생 후기</h2>
       <ul>
         <li><Link to="#goal">목표과정</Link></li>

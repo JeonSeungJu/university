@@ -88,6 +88,7 @@ const AdminNoticeBoard = () => {
                 <th>작성일</th>
                 <th>추천</th>
                 <th>조회</th>
+                <th>액션</th>
               </tr>
             </thead>
             <tbody>

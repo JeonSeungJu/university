@@ -103,6 +103,8 @@ public class NoticeService {
             contentMap.put("writer", board.getWriter());
             contentMap.put("content", board.getContent());
             contentMap.put("createdat", board.getCreatedAt());
+            contentMap.put("views", board.getViews());
+            contentMap.put("likes", board.getLikes());
             contentList.add(contentMap);
         }
 
