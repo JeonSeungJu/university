@@ -7,7 +7,7 @@ import Pagination from 'react-js-pagination';
 import './ReviewList.css';
 
 
-const AdminReviewList = () => {
+const ReviewList = () => {
   const [reviews, setReviews] = useState([]);
   const [activePage, setActivePage] = useState(1);
   const itemsPerPage = 5;
@@ -66,18 +66,6 @@ const AdminReviewList = () => {
     setActivePage(1);
   };
 
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`http://3.106.45.125:8080/api/board/delete-review/${id}`);
-      setReviews(reviews.filter(review => review.rid !== id));
-      setDeleteId(null);
-      setShowDeletePopup(false);
-    } catch (error) {
-      console.error('Error deleting review:', error);
-    }
-  };
-
-
 
 
   return (
@@ -100,7 +88,7 @@ const AdminReviewList = () => {
 
       <div className="card-container">
         {reviews.map((review, index) => (
-          <Card key={index} review={review} onDelete={handleDeleteClick} />
+          <Card key={index} review={review}  />
         ))}
       </div>
 

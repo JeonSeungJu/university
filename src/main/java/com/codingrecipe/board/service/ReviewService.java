@@ -74,13 +74,23 @@ public class ReviewService {
             }
         }
     }
-    public List<Map<String, Object>> getReviews(Pageable pageable) {
-        Page<ReviewEntity> boardPage = reviewRepository.findAll(pageable);
-        List<Map<String, Object>> contentList = new ArrayList<>();
+    public Page<ReviewEntity> getReviews(String searchQuery, String searchType, Pageable pageable) {
+        switch (searchType) {
+            case "title":
+                return reviewRepository.findByTitleContainingIgnoreCase(searchQuery, pageable);
+            case "content":
+                return reviewRepository.findByReviewContentContainingIgnoreCase(searchQuery, pageable);
+            case "all":
+            default:
+                return reviewRepository.findByTitleContainingIgnoreCaseOrReviewContentContainingIgnoreCase(searchQuery, searchQuery, pageable);
+        }
+    }
 
-        for (ReviewEntity review : boardPage.getContent()) {
+    public List<Map<String, Object>> convertToContentList(Page<ReviewEntity> reviewPage) {
+        List<Map<String, Object>> contentList = new ArrayList<>();
+        for (ReviewEntity review : reviewPage.getContent()) {
             Map<String, Object> contentMap = new HashMap<>();
-            contentMap.put("cid", review.getRid());
+            contentMap.put("rid", review.getRid());
             contentMap.put("title", review.getTitle());
             contentMap.put("goalContent", review.getGoalContent());
             contentMap.put("mentorContent", review.getMentorContent());
@@ -92,19 +102,15 @@ public class ReviewService {
                 ReviewFileEntity fileEntity = fileEntities.get(0);
                 String storedFileName = fileEntity.getStoredFileName();
 
-                // URL 중복 여부를 검사
-                String imageUrl;
-                if (storedFileName.startsWith("http")) {
-                    imageUrl = storedFileName;
-                } else {
-                    imageUrl = amazonS3.getUrl(bucketName, storedFileName).toString();
-                }
+                String imageUrl = storedFileName.startsWith("http") ? storedFileName : amazonS3.getUrl(bucketName, storedFileName).toString();
                 contentMap.put("ImagePath", imageUrl);
             }
             contentList.add(contentMap);
         }
         return contentList;
     }
+
+
 
     public ReviewDTO getReviewDetails(String id) {
         ReviewEntity reviewEntity = reviewRepository.findById(Long.parseLong(id)).orElse(null);

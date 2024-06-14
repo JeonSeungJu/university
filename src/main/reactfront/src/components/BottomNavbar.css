@@ -16,4 +16,35 @@
   display: inline-block;
   padding-left: 15px; /* 각 네브바 아이템에 왼쪽 여백을 추가합니다 */
   margin-right: 5px; /* 각 네브바 아이템에 오른쪽 여백을 추가합니다 */
+  position: relative; /* 드롭다운 메뉴를 포지셔닝하기 위해 상대 위치를 사용합니다 */
+}
+
+/* 드롭다운 메뉴 스타일 추가 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none; /* 기본적으로 드롭다운 메뉴를 숨깁니다 */
+  min-width: 200px; /* 드롭다운 메뉴의 최소 너비를 설정합니다 */
+  padding: 10px 0; /* 드롭다운 메뉴의 상하 여백을 추가합니다 */
+  flex-direction: column; /* 드롭다운 항목을 수직으로 나열합니다 */
+}
+
+.nav-link:hover .dropdown-menu {
+  display: flex; /* 부모 요소에 마우스를 올리면 드롭다운 메뉴를 flex로 표시합니다 */
+}
+
+.dropdown-item {
+  padding: 15px 20px; /* 드롭다운 항목의 패딩을 늘립니다 */
+  cursor: pointer;
+  white-space: nowrap; /* 텍스트가 길어질 경우 한 줄로 유지합니다 */
+  font-size: 16px; /* 글자 크기를 약간 키웁니다 */
+  letter-spacing: 2px; /* 글자 간의 간격을 늘립니다 */
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
 }

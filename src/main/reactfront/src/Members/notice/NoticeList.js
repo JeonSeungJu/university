@@ -21,6 +21,9 @@ const NoticeList = () => {
       .catch(error => console.error('Error fetching notices:', error));
   }, [currentPage]);
 
+  const handleWriteClick = () => {
+    navigate('/noticeform');
+  };
 
   const handlePostClick = (notice) => {
     navigate(`/noticeDetail/${notice.nid}`);
@@ -55,6 +58,10 @@ const NoticeList = () => {
 
   return (
     <div>
+      <div className="button-container">
+        <button onClick={handleWriteClick}>글쓰기</button>
+      </div>
+
       {notices.length === 0 ? (
         <p>공지사항이 없습니다.</p>
       ) : (
@@ -116,4 +123,3 @@ const NoticeList = () => {
 };
 
 export default NoticeList;
-

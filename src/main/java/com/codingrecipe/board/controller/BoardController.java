@@ -293,22 +293,26 @@ public class BoardController {
 
 
     @GetMapping(value = "/get-review", produces = "application/json; charset=UTF-8")
+
     public ResponseEntity<Map<String, Object>> getReviews(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "4") int size
-    ) {
-        int pages = page - 1;
-        Pageable pageable = PageRequest.of(pages, size, Sort.Direction.DESC, "rid");
-        List<Map<String, Object>> contentList = reviewService.getReviews(pageable);
-        Page<ReviewEntity> reviewpage = reviewRepository.findAll(pageable);
-        System.out.println(contentList);
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "") String search,
+            @RequestParam(defaultValue = "all") String searchType) {
+        Pageable pageable = PageRequest.of(page - 1, size, Sort.by("rid").descending());
+        Page<ReviewEntity> pageReviews = reviewService.getReviews(search, searchType, pageable);
+        List<Map<String, Object>> contentList = reviewService.convertToContentList(pageReviews);
+
         Map<String, Object> response = new HashMap<>();
         response.put("contents", contentList);
-        response.put("currentPage", page);
-        response.put("totalItems", contentList.size()); // 전체 아이템 수를 가져오는 방법이 없으므로 리스트 크기로 대체
-        response.put("totalPages", reviewpage.getTotalPages());
+        response.put("currentPage", pageReviews.getNumber() + 1);
+        response.put("totalItems", pageReviews.getTotalElements());
+        response.put("totalPages", pageReviews.getTotalPages());
+
         return ResponseEntity.ok(response);
     }
+
+
     @PutMapping("/update-review/{id}")
     public ResponseEntity<String> updateReview(@PathVariable("id") Long id, @ModelAttribute ReviewDTO reviewDTO,
                                                @RequestParam(value = "file", required = false) MultipartFile file) throws IOException {
