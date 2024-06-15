@@ -34,10 +34,6 @@ const MainPage = () => {
       <img src="main.png" alt="Main Image" className="main-image" />
       <div className="content-container">
         <div className="content">
-          <div className="buttons">
-            <button className="main-button">Button 1</button>
-            <button className="main-button">Button 2</button>
-          </div>
           <div className="text-content">
             <h2>Study With Us!</h2>
             <p>다양한 전공학위나 자격이 필요하신 “직장인”</p>
@@ -46,12 +42,12 @@ const MainPage = () => {
             <p>“캐나다 이민”을 위한 ECE학습자 분들까지</p>
             <p>모두 “스터디어스”와 함께 성공하였습니다</p>
           </div>
-        </div>
-        <div className="image-gallery">
-          <img src="image1.jpg" alt="Gallery Image 1" className="gallery-image" />
-          <img src="image2.jpg" alt="Gallery Image 2" className="gallery-image" />
-          <img src="image3.jpg" alt="Gallery Image 3" className="gallery-image" />
-          <img src="image4.jpg" alt="Gallery Image 4" className="gallery-image" />
+          <div className="image-gallery">
+            <img src="image1.jpg" alt="Gallery Image 1" className="gallery-image" />
+            <img src="image2.jpg" alt="Gallery Image 2" className="gallery-image" />
+            <img src="image3.jpg" alt="Gallery Image 3" className="gallery-image" />
+            <img src="image4.jpg" alt="Gallery Image 4" className="gallery-image" />
+          </div>
         </div>
         <div className="info-section">
           <div className="info-block">
