@@ -52,6 +52,13 @@ const ReviewCardSlider = () => {
         {reviews.map((review, index) => (
           <SwiperSlide key={index} className="review-card">
             <div className="review-content">
+            {review.ImagePath ? (
+                <img src={review.ImagePath} alt="게시물 이미지" style={{ height: '150px' }} onError={handleImageError} />
+                ) : (
+                <div style={{ height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f0f0f0' }}>
+                    이미지가 없습니다.
+                </div>
+                )}
               <h3>{review.title}</h3>
               <p>{review.content}</p>
               <p className="author">By {review.author} on {review.date}</p>
