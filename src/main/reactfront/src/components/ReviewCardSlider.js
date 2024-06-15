@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './ReviewCardSlider.css';
-import SwipeableViews from 'react-swipeable-views';
+import SwiperCore, { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+
+SwiperCore.use([Navigation]);
 
 const ReviewCardSlider = () => {
   const [reviews, setReviews] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [swiper, setSwiper] = useState(null);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -25,14 +30,16 @@ const ReviewCardSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+      swiper?.slideNext();
     }, 5000); // 5초마다 슬라이드 변경
 
     return () => clearInterval(interval);
-  }, [reviews.length]);
+  }, [swiper]);
 
-  const handleSlideChange = (index) => {
-    setActiveIndex(index);
+  const handleSlideChange = () => {
+    if (swiper) {
+      setActiveIndex(swiper.realIndex);
+    }
   };
 
   const handleMoreReviews = () => {
@@ -42,16 +49,23 @@ const ReviewCardSlider = () => {
 
   return (
     <div className="review-card-slider">
-      <SwipeableViews enableMouseEvents index={activeIndex} onChangeIndex={handleSlideChange}>
+      <Swiper
+        onSwiper={setSwiper}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation
+        loop
+        onSlideChange={handleSlideChange}
+      >
         {reviews.map((review, index) => (
-          <div key={index} className="review-card" onClick={() => handleSlideChange((index + 1) % reviews.length)}>
+          <SwiperSlide key={index} className="review-card">
             <h3>{review.title}</h3>
             <p>{review.content}</p>
             <p className="author">By {review.author} on {review.date}</p>
             <p className="rating">Rating: {review.rating}</p>
-          </div>
+          </SwiperSlide>
         ))}
-      </SwipeableViews>
+      </Swiper>
       <button className="more-button" onClick={handleMoreReviews}>후기 더 보기</button>
     </div>
   );

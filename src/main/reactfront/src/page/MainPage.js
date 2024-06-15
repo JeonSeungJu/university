@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './MainPage.css'; // 스타일 파일을 import
 import { useSelector } from 'react-redux';
 import ReviewCardSlider from '../components/ReviewCardSlider';
-import SwipeableViews from 'react-swipeable-views';
 
 const MainPage = () => {
   // Redux에서 로그인 상태를 가져오기
