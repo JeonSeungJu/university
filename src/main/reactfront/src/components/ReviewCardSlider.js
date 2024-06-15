@@ -54,10 +54,11 @@ const ReviewCardSlider = () => {
         loop
         centeredSlides
         onSlideChange={() => {}}
+        className="swiper-container"
       >
         {reviews.map((review, index) => (
-          <SwiperSlide key={index} className="review-card">
-            <div className="review-content">
+          <SwiperSlide key={index} className="swiper-slide">
+            <div className="review-card">
               {review.ImagePath ? (
                 <img src={review.ImagePath} alt="게시물 이미지" onError={handleImageError} />
               ) : (
