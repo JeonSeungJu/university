@@ -52,10 +52,12 @@ const ReviewCardSlider = () => {
         slidesPerView={1}
         navigation
         loop
+        centeredSlides
+        virtual
         onSlideChange={handleSlideChange}
       >
         {reviews.map((review, index) => (
-          <SwiperSlide key={index} className="review-card">
+          <SwiperSlide key={index} className="review-card" virtualIndex={index}>
             <h3>{review.title}</h3>
             <p>{review.content}</p>
             <p className="author">By {review.author} on {review.date}</p>
