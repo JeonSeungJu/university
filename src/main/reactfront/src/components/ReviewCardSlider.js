@@ -60,12 +60,14 @@ const ReviewCardSlider = () => {
           <SwiperSlide key={index} className="swiper-slide">
             <div className="review-card">
               {review.ImagePath ? (
-                <img src={review.ImagePath} alt="게시물 이미지" onError={handleImageError} />
+                <img src={review.ImagePath} alt="게시물 이미지" className="review-image" onError={handleImageError} />
               ) : (
                 <div>이미지가 없습니다.</div>
               )}
-              <h3>{review.title}</h3>
-              <p>{review.content}</p>
+              <div className="review-text">
+                <h3>{review.title}</h3>
+                <p>{review.content}</p>
+              </div>
               <p className="author">By {review.author} on {review.date}</p>
               <p className="rating">Rating: {review.rating}</p>
             </div>
