@@ -8,12 +8,13 @@
     margin-bottom: 20px;
   }
   
+  
   .review-content {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    height: 400px; /* 카드의 높이를 조정합니다 */
+    height: 480px; /* 카드의 높이를 조정합니다 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,6 +40,9 @@
   
   .review-card p {
     margin-top: 10px;
+    overflow: hidden; /* 텍스트가 카드 밖으로 넘치지 않도록 설정합니다 */
+    text-overflow: ellipsis; /* 텍스트가 너무 길 경우 생략 부호(...)를 표시합니다 */
+    white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정합니다 */
   }
   
   .review-card .more-button {
