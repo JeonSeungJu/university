@@ -4,7 +4,6 @@ import './ReviewCardSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
-
 const ReviewCardSlider = () => {
   const [reviews, setReviews] = useState([]);
   const [swiper, setSwiper] = useState(null);
@@ -35,12 +34,9 @@ const ReviewCardSlider = () => {
     return () => clearInterval(interval);
   }, [swiper]);
 
-
-
   const handleMoreReviews = () => {
     navigate('/review');
   };
-  
 
   const handleImageError = (e) => {
     e.target.src = '/path/to/default-image.jpg';
@@ -49,7 +45,7 @@ const ReviewCardSlider = () => {
 
   return (
     <div className="review-card-slider">
-        <h3>수강후기</h3>
+      <h3 className="review-title">수강후기</h3>
       <Swiper
         onSwiper={setSwiper}
         spaceBetween={30}
