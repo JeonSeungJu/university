@@ -67,8 +67,6 @@ const ReviewCardSlider = () => {
               )}
               <h3>{review.title}</h3>
               <p>{review.content}</p>
-              <p className="author">By {review.author} on {review.date}</p>
-              <p className="rating">Rating: {review.rating}</p>
             </div>
           </SwiperSlide>
         ))}
