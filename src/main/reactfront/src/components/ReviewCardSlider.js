@@ -4,6 +4,7 @@ import './ReviewCardSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
+
 const ReviewCardSlider = () => {
   const [reviews, setReviews] = useState([]);
   const [swiper, setSwiper] = useState(null);
@@ -34,10 +35,12 @@ const ReviewCardSlider = () => {
     return () => clearInterval(interval);
   }, [swiper]);
 
+
+
   const handleMoreReviews = () => {
-    // 후기 더 보기 버튼 클릭 시 /review로 이동
     history.push('/review');
   };
+  
 
   const handleImageError = (e) => {
     e.target.src = '/path/to/default-image.jpg';
