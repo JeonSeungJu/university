@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom'; // React Router의 useHistory 임포트
+import { useNavigate } from 'react-router-dom';
 import './ReviewCardSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -8,7 +8,7 @@ import 'swiper/swiper-bundle.css';
 const ReviewCardSlider = () => {
   const [reviews, setReviews] = useState([]);
   const [swiper, setSwiper] = useState(null);
-  const history = useHistory(); // useHistory 훅을 이용하여 history 객체를 가져옴
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -38,7 +38,7 @@ const ReviewCardSlider = () => {
 
 
   const handleMoreReviews = () => {
-    history.push('/review');
+    navigate('/review');
   };
   
 
