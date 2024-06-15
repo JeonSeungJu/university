@@ -3,21 +3,45 @@
   }
   
   .review-title {
-    font-size: 24px;
-    color: #00cccc; /* 청록색으로 설정 */
+    font-size: 32px;
+    color: #2481A6; /* 청록색으로 설정 */
+    margin-bottom: 20px;
   }
   
-  .review-heading {
+  .review-content {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 400px; /* 카드의 높이를 조정합니다 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .review-card {
+    width: 300px; /* 카드의 너비를 조정합니다 */
+    margin: 0 10px;
+  }
+  
+  .review-card img {
+    height: 200px; /* 이미지의 높이를 조정합니다 */
+    width: 100%; /* 이미지의 너비를 100%로 설정합니다 */
+    object-fit: cover; /* 이미지가 카드에 잘 맞게 보이도록 설정합니다 */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .review-card h3 {
     font-size: 20px;
-    color: #000; /* 검은색으로 설정 */
+    margin-top: 10px;
   }
   
-  .more-button {
-    margin-top: 20px; /* 버튼과 후기 사이 간격 설정 */
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+  .review-card p {
+    margin-top: 10px;
+  }
+  
+  .review-card .more-button {
+    margin-top: 20px;
   }
   
