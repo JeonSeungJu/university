@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 1500px; /* 카드의 높이를 조정합니다 */
+    height: 100px; /* 카드의 높이를 조정합니다 */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
