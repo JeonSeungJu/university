@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import './MainPage.css'; // 스타일 파일을 import
 import { useSelector } from 'react-redux';
-import ReviewCardSlider from './ReviewCardSlider'; // ReviewCardSlider 컴포넌트 import 추가
-
+import ReviewCardSlider from '../components/ReviewCardSlider';
 const MainPage = () => {
   // Redux에서 로그인 상태를 가져오기
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
