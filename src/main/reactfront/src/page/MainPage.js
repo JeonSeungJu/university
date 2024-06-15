@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './MainPage.css'; // 스타일 파일을 import
 import { useSelector } from 'react-redux';
+import ReviewCardSlider from './ReviewCardSlider'; // ReviewCardSlider 컴포넌트 import 추가
 
 const MainPage = () => {
   // Redux에서 로그인 상태를 가져오기
@@ -46,7 +47,8 @@ const MainPage = () => {
         <img src="image3.jpg" alt="Gallery Image 3" className="gallery-image" />
         <img src="image4.jpg" alt="Gallery Image 4" className="gallery-image" />
       </div>
-      {/* 지도와 정보 섹션을 제거합니다 */}
+      {/* ReviewCardSlider 컴포넌트 추가 */}
+      <ReviewCardSlider />
     </div>
   );
 };
