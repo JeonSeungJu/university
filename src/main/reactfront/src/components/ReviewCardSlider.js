@@ -39,6 +39,7 @@ const ReviewCardSlider = () => {
 
   return (
     <div className="review-card-slider">
+      <h3>수강후기</h3>
       <Swiper
         onSwiper={setSwiper}
         spaceBetween={30}
@@ -48,7 +49,6 @@ const ReviewCardSlider = () => {
         centeredSlides
         onSlideChange={() => {}}
       >
-        <h3>수강후기</h3>
         {reviews.map((review, index) => (
           <SwiperSlide key={index} className="review-card">
             <div className="review-content">
