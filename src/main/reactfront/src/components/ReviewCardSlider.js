@@ -49,7 +49,7 @@ const ReviewCardSlider = () => {
       <Swiper
         onSwiper={setSwiper}
         spaceBetween={30}
-        slidesPerView={3} // 여기서 slidesPerView 값을 조정하여 보여지는 리뷰 개수를 설정할 수 있습니다
+        slidesPerView={5} // 여기서 slidesPerView 값을 조정하여 보여지는 리뷰 개수를 설정할 수 있습니다
         navigation
         loop
         centeredSlides
