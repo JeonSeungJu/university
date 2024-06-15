@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom'; // React Router의 useHistory 임포트
 import './ReviewCardSlider.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -6,6 +7,7 @@ import 'swiper/swiper-bundle.css';
 const ReviewCardSlider = () => {
   const [reviews, setReviews] = useState([]);
   const [swiper, setSwiper] = useState(null);
+  const history = useHistory(); // useHistory 훅을 이용하여 history 객체를 가져옴
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -33,8 +35,13 @@ const ReviewCardSlider = () => {
   }, [swiper]);
 
   const handleMoreReviews = () => {
-    // 후기 더 보기 버튼 클릭 시 필요한 동작 구현
-    console.log('더 많은 후기 보기');
+    // 후기 더 보기 버튼 클릭 시 /review로 이동
+    history.push('/review');
+  };
+
+  const handleImageError = (e) => {
+    e.target.src = '/path/to/default-image.jpg';
+    e.target.alt = '이미지를 로드할 수 없습니다.';
   };
 
   return (
@@ -52,13 +59,13 @@ const ReviewCardSlider = () => {
         {reviews.map((review, index) => (
           <SwiperSlide key={index} className="review-card">
             <div className="review-content">
-            {review.ImagePath ? (
+              {review.ImagePath ? (
                 <img src={review.ImagePath} alt="게시물 이미지" style={{ height: '150px' }} onError={handleImageError} />
-                ) : (
+              ) : (
                 <div style={{ height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f0f0f0' }}>
-                    이미지가 없습니다.
+                  이미지가 없습니다.
                 </div>
-                )}
+              )}
               <h3>{review.title}</h3>
               <p>{review.content}</p>
               <p className="author">By {review.author} on {review.date}</p>
