@@ -48,10 +48,10 @@ const ReviewCardSlider = () => {
         centeredSlides
         onSlideChange={() => {}}
       >
+        <h3>수강후기</h3>
         {reviews.map((review, index) => (
           <SwiperSlide key={index} className="review-card">
             <div className="review-content">
-            <h3>수강후기</h3> 
               <h3>{review.title}</h3>
               <p>{review.content}</p>
               <p className="author">By {review.author} on {review.date}</p>
