@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ReviewCardSlider.css';
-import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-
-SwiperCore.use([Navigation]);
 
 const ReviewCardSlider = () => {
   const [reviews, setReviews] = useState([]);
@@ -16,12 +13,12 @@ const ReviewCardSlider = () => {
       try {
         const response = await fetch('http://3.106.45.125:8080/api/board/get-review?page=1&size=5');
         if (!response.ok) {
-          throw new Error('Failed to fetch reviews');
+          throw new Error('후기를 불러오는 데 실패했습니다');
         }
         const data = await response.json();
         setReviews(data.contents);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('데이터를 불러오는 도중 오류가 발생했습니다:', error);
       }
     };
 
