@@ -148,10 +148,6 @@ const LoginForm = () => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         </label>
         <br />
-        <label>
-          <input type="checkbox" checked={rememberMe} onChange={handleRememberMeChange} />
-          자동로그인
-        </label>
         <br />
         <button type="submit">로그인</button>
       </form>
