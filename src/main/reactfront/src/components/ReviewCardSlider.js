@@ -49,25 +49,24 @@ const ReviewCardSlider = () => {
       <Swiper
         onSwiper={setSwiper}
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={3} // 여기서 slidesPerView 값을 조정하여 보여지는 리뷰 개수를 설정할 수 있습니다
         navigation
         loop
         centeredSlides
         onSlideChange={() => {}}
-        className="swiper-container"
       >
         {reviews.map((review, index) => (
-          <SwiperSlide key={index} className="swiper-slide">
-            <div className="review-card">
+          <SwiperSlide key={index} className="review-card">
+            <div className="review-content">
               {review.ImagePath ? (
-                <img src={review.ImagePath} alt="게시물 이미지" className="review-image" onError={handleImageError} />
+                <img src={review.ImagePath} alt="게시물 이미지" onError={handleImageError} />
               ) : (
-                <div>이미지가 없습니다.</div>
+                <div style={{ height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f0f0f0' }}>
+                  이미지가 없습니다.
+                </div>
               )}
-              <div className="review-text">
-                <h3>{review.title}</h3>
-                <p>{review.content}</p>
-              </div>
+              <h3>{review.title}</h3>
+              <p>{review.content}</p>
               <p className="author">By {review.author} on {review.date}</p>
               <p className="rating">Rating: {review.rating}</p>
             </div>
