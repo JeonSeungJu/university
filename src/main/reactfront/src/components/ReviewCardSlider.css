@@ -1,23 +1,23 @@
 .review-card-slider {
     position: relative;
     overflow: hidden;
+    width: 100%;
   }
   
-  .swipeable-views-container {
+  .swiper-container {
+    width: 100%;
+  }
+  
+  .swiper-slide {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    background-color: #fff; /* Swiper 슬라이드 배경색 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 10px; /* 둥근 테두리 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
     transition: transform 0.5s ease;
-  }
-  
-  .review-card {
-    min-width: 300px;
-    max-width: 300px;
-    margin: 0 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.5s ease;
-    cursor: pointer;
   }
   
   .more-button {

@@ -5,7 +5,6 @@ import 'swiper/swiper-bundle.css';
 
 const ReviewCardSlider = () => {
   const [reviews, setReviews] = useState([]);
-  const [activeIndex, setActiveIndex] = useState(0);
   const [swiper, setSwiper] = useState(null);
 
   useEffect(() => {
@@ -33,12 +32,6 @@ const ReviewCardSlider = () => {
     return () => clearInterval(interval);
   }, [swiper]);
 
-  const handleSlideChange = () => {
-    if (swiper) {
-      setActiveIndex(swiper.realIndex);
-    }
-  };
-
   const handleMoreReviews = () => {
     // 후기 더 보기 버튼 클릭 시 필요한 동작 구현
     console.log('더 많은 후기 보기');
@@ -53,15 +46,17 @@ const ReviewCardSlider = () => {
         navigation
         loop
         centeredSlides
-        virtual
-        onSlideChange={handleSlideChange}
+        onSlideChange={() => {}}
       >
         {reviews.map((review, index) => (
-          <SwiperSlide key={index} className="review-card" virtualIndex={index}>
-            <h3>{review.title}</h3>
-            <p>{review.content}</p>
-            <p className="author">By {review.author} on {review.date}</p>
-            <p className="rating">Rating: {review.rating}</p>
+          <SwiperSlide key={index} className="review-card">
+            <div className="review-content">
+            <h3>수강후기</h3> 
+              <h3>{review.title}</h3>
+              <p>{review.content}</p>
+              <p className="author">By {review.author} on {review.date}</p>
+              <p className="rating">Rating: {review.rating}</p>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
