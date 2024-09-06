@@ -29,7 +29,7 @@ const AdminNoticeForm = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://3.106.45.125:8080/api/board/image', formData, {
+      const response = await axios.post('http://13.237.172.212:8080/api/board/image', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -68,7 +68,7 @@ const AdminNoticeForm = () => {
     };
 
     try {
-      const response = await fetch('http://3.106.45.125:8080/api/board/save-notice', {
+      const response = await fetch('http://13.237.172.212:8080/api/board/save-notice', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

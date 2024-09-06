@@ -24,7 +24,7 @@ const AdminNoticeEdit = () => {
   useEffect(() => {
     const fetchNotice = async () => {
       try {
-        const response = await axios.get(`http://3.106.45.125:8080/api/board/get-notice-details/${id}`);
+        const response = await axios.get(`http://13.237.172.212:8080/api/board/get-notice-details/${id}`);
         if (response.status === 200) {
           const data = response.data;
           setTitle(data.title);
@@ -50,7 +50,7 @@ const AdminNoticeEdit = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://3.106.45.125:8080/api/board/image', formData, {
+      const response = await axios.post('http://13.237.172.212:8080/api/board/image', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -89,7 +89,7 @@ const AdminNoticeEdit = () => {
     };
 
     try {
-      const response = await axios.put(`http://3.106.45.125:8080/api/board/edit-notice/${id}`, noticeData, {
+      const response = await axios.put(`http://13.237.172.212:8080/api/board/edit-notice/${id}`, noticeData, {
         headers: {
           'Content-Type': 'application/json',
         },

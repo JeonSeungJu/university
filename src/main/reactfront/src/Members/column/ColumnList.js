@@ -34,7 +34,7 @@ const ColumnList = () => {
   const fetchColumns = async (page, option, value) => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://3.106.45.125:8080/api/board/columns?page=${page}&size=4`, {
+      const response = await axios.get(`http://13.237.172.212:8080/api/board/columns?page=${page}&size=4`, {
         params: {
           option: option,
           value: value,

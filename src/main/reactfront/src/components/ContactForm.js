@@ -49,7 +49,7 @@ const ContactForm = () => {
       formData.append('file', file);
       formData.append('agree', agree);
 
-      const response = await fetch('http://3.106.45.125:8080/api/contact/submit', {
+      const response = await fetch('http://13.237.172.212:8080/api/contact/submit', {
         method: 'POST',
         body: formData,
       });

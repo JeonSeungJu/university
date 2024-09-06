@@ -13,7 +13,7 @@ const NoticeDetail = () => {
 
     const fetchPostDetail = async () => {
       try {
-        const response = await fetch(`http://3.106.45.125:8080/api/board/get-notice-details/${id}`);
+        const response = await fetch(`http://13.237.172.212:8080/api/board/get-notice-details/${id}`);
         if (response.ok) {
           const data = await response.json();
           const { title, content, writer, createdAt } = data;
@@ -53,7 +53,7 @@ const NoticeDetail = () => {
     if (!storedViews || Number(storedViews) < todayMidnight.getTime()) {
       try {
         // 조회수 증가 API 호출
-        const response = await fetch(`http://3.106.45.125:8080/api/board/increase-views/${id}`, {
+        const response = await fetch(`http://13.237.172.212:8080/api/board/increase-views/${id}`, {
           method: 'PUT',
         });
         console.log('안녕은 영원한 헤어짐은 아니겠지요',id); // 콘솔 로그 추가

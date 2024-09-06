@@ -10,7 +10,7 @@ const BoardDetail = () => {
 
   const fetchComments = async () => {
     try {
-      const response = await fetch(`http://3.106.45.125:8080/api/board/get-comments/${id}`);
+      const response = await fetch(`http://13.237.172.212:8080/api/board/get-comments/${id}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data);
@@ -29,7 +29,7 @@ useEffect(() => {
 
   const fetchPostDetail = async () => {
     try {
-      const response = await fetch(`http://3.106.45.125:8080/api/board/get-post-details/${id}`);
+      const response = await fetch(`http://13.237.172.212:8080/api/board/get-post-details/${id}`);
       if (response.ok) {
         const data = await response.json();
         // 서버 응답에서 필요한 필드를 가져오도록 수정

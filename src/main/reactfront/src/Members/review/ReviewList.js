@@ -22,7 +22,7 @@ const ReviewList = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch(`http://3.106.45.125:8080/api/board/get-review?page=${activePage}&size=${itemsPerPage}&search=${searchQuery}&searchType=${searchType}`);
+        const response = await fetch(`http://13.237.172.212:8080/api/board/get-review?page=${activePage}&size=${itemsPerPage}&search=${searchQuery}&searchType=${searchType}`);
         if (!response.ok) {
           throw new Error('Failed to fetch reviews');
         }

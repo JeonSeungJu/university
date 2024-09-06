@@ -13,7 +13,7 @@ const AdminNoticeBoard = () => {
   const [searchValue, setSearchValue] = useState(''); // 검색어 상태 추가
 
   useEffect(() => {
-    axios.get(`http://3.106.45.125:8080/api/board/get-notices?page=${currentPage}&size=4`)
+    axios.get(`http://13.237.172.212:8080/api/board/get-notices?page=${currentPage}&size=4`)
       .then(response => {
         setNotices(response.data.contents);
         setTotalPages(response.data.totalPages);
@@ -32,7 +32,7 @@ const AdminNoticeBoard = () => {
   const handleDelete = async (nid) => {
     if (window.confirm('정말로 삭제하시겠습니까?')) {
       try {
-        const response = await axios.delete(`http://3.106.45.125:8080/api/board/delete-notice/${nid}`);
+        const response = await axios.delete(`http://13.237.172.212:8080/api/board/delete-notice/${nid}`);
         if (response.status === 200) {
           setNotices(notices.filter(notice => notice.nid !== nid));
         } else {
@@ -61,7 +61,7 @@ const AdminNoticeBoard = () => {
   };
 
   const handleSearch = () => {
-    axios.get(`http://3.106.45.125:8080/api/board/search-notices?option=${searchOption}&value=${searchValue}&page=1&size=4`)
+    axios.get(`http://13.237.172.212:8080/api/board/search-notices?option=${searchOption}&value=${searchValue}&page=1&size=4`)
       .then(response => {
         setNotices(response.data.contents);
         setTotalPages(response.data.totalPages);

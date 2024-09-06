@@ -63,7 +63,7 @@ const AdminColumnForm = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://3.106.45.125:8080/api/board/image', formData, {
+      const response = await axios.post('http://13.237.172.212:8080/api/board/image', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -91,7 +91,7 @@ const AdminColumnForm = () => {
     }
 
     try {
-      const res = await axios.post('http://3.106.45.125:8080/api/board/save-column', formData, {
+      const res = await axios.post('http://13.237.172.212:8080/api/board/save-column', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

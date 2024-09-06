@@ -34,7 +34,7 @@ const BoardList = () => {
   const fetchPosts = async (page, option, value) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://3.106.45.125:8080/api/board/search-posts?option=${option}&value=${value}&page=${page}&size=4`);
+      const response = await fetch(`http://13.237.172.212:8080/api/board/search-posts?option=${option}&value=${value}&page=${page}&size=4`);
       const data = await response.json();
       setPosts(data.contents || []);
       setTotalPages(data.totalPages || 1);
@@ -68,7 +68,7 @@ const BoardList = () => {
         const password = prompt('비밀번호를 입력하세요:');
         if (password !== null) {
           const boardDTO = { id: post.cid, password: password };
-          const response = await fetch('http://3.106.45.125:8080/api/board/verify-password', {
+          const response = await fetch('http://13.237.172.212:8080/api/board/verify-password', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(boardDTO),

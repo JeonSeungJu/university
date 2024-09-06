@@ -18,7 +18,7 @@ const AdminReviewEdit = () => {
   useEffect(() => {
     const fetchReview = async () => {
       try {
-        const response = await axios.get(`http://3.106.45.125:8080/api/board/get-review/${id}`);
+        const response = await axios.get(`http://13.237.172.212:8080/api/board/get-review/${id}`);
         const data = response.data;
         setTitle(data.title);
         setGoalContent(data.goalContent);
@@ -58,7 +58,7 @@ const AdminReviewEdit = () => {
     }
 
     try {
-      await axios.put(`http://3.106.45.125:8080/api/board/update-review/${id}`, formData, {
+      await axios.put(`http://13.237.172.212:8080/api/board/update-review/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -12,7 +12,7 @@ const AdminReviewDetail = () => {
   useEffect(() => {
     const fetchReview = async () => {
       try {
-        const response = await axios.get(`http://3.106.45.125:8080/api/board/get-review-detail/${id}`);
+        const response = await axios.get(`http://13.237.172.212:8080/api/board/get-review-detail/${id}`);
         setReview(response.data);
       } catch (error) {
         console.error('Error fetching review:', error);

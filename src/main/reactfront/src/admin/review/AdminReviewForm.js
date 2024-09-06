@@ -47,7 +47,7 @@ const AdminReviewForm = () => {
     }
 
     try {
-      await axios.post('http://3.106.45.125:8080/api/board/save-review', formData, {
+      await axios.post('http://13.237.172.212:8080/api/board/save-review', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -13,7 +13,7 @@ const NoticeList = () => {
   const [searchValue, setSearchValue] = useState(''); // 검색어 상태 추가
 
   useEffect(() => {
-    axios.get(`http://3.106.45.125:8080/api/board/get-notices?page=${currentPage}&size=4`)
+    axios.get(`http://13.237.172.212:8080/api/board/get-notices?page=${currentPage}&size=4`)
       .then(response => {
         setNotices(response.data.contents);
         setTotalPages(response.data.totalPages);
@@ -47,7 +47,7 @@ const NoticeList = () => {
   };
 
   const handleSearch = () => {
-    axios.get(`http://3.106.45.125:8080/api/board/search-notices?option=${searchOption}&value=${searchValue}&page=1&size=4`)
+    axios.get(`http://13.237.172.212:8080/api/board/search-notices?option=${searchOption}&value=${searchValue}&page=1&size=4`)
       .then(response => {
         setNotices(response.data.contents);
         setTotalPages(response.data.totalPages);

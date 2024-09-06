@@ -61,7 +61,7 @@ const LoginForm = () => {
     e.preventDefault();
   
     try {
-      const response = await axios.post('http://3.106.45.125:8080/api/members/login', {
+      const response = await axios.post('http://13.237.172.212:8080/api/members/login', {
         email,
         password,
       });

@@ -72,7 +72,7 @@ const AdminComponent = () => {
 
   const fetchTemporaryUsers = async () => {
     try {
-      const response = await axios.post('http://3.106.45.125:8080/api/manager/members', {});
+      const response = await axios.post('http://13.237.172.212:8080/api/manager/members', {});
       setTemporaryUsers(response.data);
     } catch (error) {
       console.error('Error fetching temporary users:', error);
@@ -94,7 +94,7 @@ const AdminComponent = () => {
   const handleConfirm = async (actionType) => {
     try {
       const email = temporaryUsers.find((user) => user.id === selectedUserId)?.email;
-      const url = actionType === 'reject' ? 'http://3.106.45.125:8080/api/manager/member-drop' : '';
+      const url = actionType === 'reject' ? 'http://13.237.172.212:8080/api/manager/member-drop' : '';
 
       await axios.post(url, { email: email })
         .then(response => {
@@ -118,7 +118,7 @@ const AdminComponent = () => {
 
   const handleSaveEdit = async (user) => {
     try {
-      await axios.post('http://3.106.45.125:8080/api/manager/update-member', user);
+      await axios.post('http://13.237.172.212:8080/api/manager/update-member', user);
       console.log('사용자 정보가 수정되었습니다.');
       fetchTemporaryUsers();
     } catch (error) {

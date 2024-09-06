@@ -35,7 +35,7 @@ const AdminBoardList = () => {
   const fetchPosts = async (page, option, value) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://3.106.45.125:8080/api/board/search-posts?option=${option}&value=${value}&page=${page}&size=10`);
+      const response = await fetch(`http://13.237.172.212:8080/api/board/search-posts?option=${option}&value=${value}&page=${page}&size=10`);
       const data = await response.json();
       if (data) {
         setPosts(data.contents || []);
@@ -67,7 +67,7 @@ const AdminBoardList = () => {
         const password = prompt('비밀번호를 입력하세요:');
         if (password !== null) {
           const boardDTO = { id: post.cid, password: password };
-          const response = await fetch('http://3.106.45.125:8080/api/board/verify-password', {
+          const response = await fetch('http://13.237.172.212:8080/api/board/verify-password', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(boardDTO),
@@ -106,7 +106,7 @@ const AdminBoardList = () => {
   const handleDeletePost = async (postId) => {
     if (window.confirm('이 게시글을 삭제하시겠습니까?')) {
       try {
-        const response = await fetch(`http://3.106.45.125:8080/api/board/delete-post/${postId}`, {
+        const response = await fetch(`http://13.237.172.212:8080/api/board/delete-post/${postId}`, {
           method: 'DELETE',
         });
         if (response.ok) {

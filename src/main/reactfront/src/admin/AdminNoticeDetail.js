@@ -16,7 +16,7 @@ const AdminNoticeDetail = () => {
 
     const fetchPostDetail = async () => {
       try {
-        const response = await fetch(`http://3.106.45.125:8080/api/board/get-notice-details/${id}`);
+        const response = await fetch(`http://13.237.172.212:8080/api/board/get-notice-details/${id}`);
         if (response.ok) {
           const data = await response.json();
           const { title, content, writer, createdAt } = data;

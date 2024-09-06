@@ -34,7 +34,7 @@ const AdminColumnList = () => {
   const fetchColumns = async (page, option, value) => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://3.106.45.125:8080/api/board/columns?page=${page}&size=4`, {
+      const response = await axios.get(`http://13.237.172.212:8080/api/board/columns?page=${page}&size=4`, {
         params: {
           option: option,
           value: value,
@@ -82,7 +82,7 @@ const AdminColumnList = () => {
   const handleDeleteColumn = async (id) => {
     if (window.confirm('이 컬럼을 삭제하시겠습니까?')) {
       try {
-        await axios.delete(`http://3.106.45.125:8080/api/board/delete-columns/${id}`);
+        await axios.delete(`http://13.237.172.212:8080/api/board/delete-columns/${id}`);
         setColumns(columns.filter(column => column.colid !== id));
       } catch (error) {
         console.error('Error deleting column:', error);

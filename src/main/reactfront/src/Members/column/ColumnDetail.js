@@ -9,7 +9,7 @@ const ColumnDetail = () => {
   useEffect(() => {
     const fetchColumn = async () => {
       try {
-        const response = await axios.get(`http://3.106.45.125:8080/api/board/get-column-detail/${id}`);
+        const response = await axios.get(`http://13.237.172.212:8080/api/board/get-column-detail/${id}`);
         setColumn(response.data);
       } catch (error) {
         console.error('Error fetching column:', error);

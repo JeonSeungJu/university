@@ -30,7 +30,7 @@ const BoardForm = () => {
       formData.append('file', file, file.name);  // 파일 이름 추가
     }
     try {
-      const response = await fetch('http://3.106.45.125:8080/api/board/save', {
+      const response = await fetch('http://13.237.172.212:8080/api/board/save', {
         method: 'POST',
         body: formData,
       });

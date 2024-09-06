@@ -12,7 +12,7 @@ const ReviewCardSlider = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('http://3.106.45.125:8080/api/board/get-review?page=1&size=5');
+        const response = await fetch('http://13.237.172.212:8080/api/board/get-review?page=1&size=5');
         if (!response.ok) {
           throw new Error('후기를 불러오는 데 실패했습니다');
         }

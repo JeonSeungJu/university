@@ -30,7 +30,7 @@ const AdminComponent = () => {
 
   const fetchTemporaryUsers = async () => {
     try {
-      const response = await axios.post('http://3.106.45.125:8080/api/manager/temporary', {});
+      const response = await axios.post('http://13.237.172.212:8080/api/manager/temporary', {});
       setTemporaryUsers(response.data);
     } catch (error) {
       console.error('Error fetching temporary users:', error);
@@ -62,7 +62,7 @@ const AdminComponent = () => {
   const handleConfirm = async (actionType) => {
     try {
       const email = temporaryUsers.find((user) => user.id === selectedUserId)?.email;
-      const url = actionType === 'accept' ? 'http://3.106.45.125:8080/api/manager/accept-user' : 'http://3.106.45.125:8080/api/manager/reject-user';
+      const url = actionType === 'accept' ? 'http://13.237.172.212:8080/api/manager/accept-user' : 'http://13.237.172.212:8080/api/manager/reject-user';
 
       await axios.post(url, {
         email: email,

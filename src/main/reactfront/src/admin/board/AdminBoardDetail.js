@@ -14,7 +14,7 @@ const AdminBoardDetail = () => {
 
   const fetchComments = async () => {
     try {
-      const response = await fetch(`http://3.106.45.125:8080/api/board/get-comments/${id}`);
+      const response = await fetch(`http://13.237.172.212:8080/api/board/get-comments/${id}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data);
@@ -34,7 +34,7 @@ const AdminBoardDetail = () => {
 
     const fetchPostDetail = async () => {
       try {
-        const response = await fetch(`http://3.106.45.125:8080/api/board/get-post-details/${id}`);
+        const response = await fetch(`http://13.237.172.212:8080/api/board/get-post-details/${id}`);
         if (response.ok) {
           const data = await response.json();
           // 서버 응답에서 필요한 필드를 가져오도록 수정
@@ -63,7 +63,7 @@ const AdminBoardDetail = () => {
 
   const handleCommentSubmit = async () => {
     try {
-      const response = await fetch('http://3.106.45.125:8080/api/board/add-comment', {
+      const response = await fetch('http://13.237.172.212:8080/api/board/add-comment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ const AdminBoardDetail = () => {
 
   const handleCommentUpdate = async () => {
     try {
-      const response = await fetch(`http://3.106.45.125:8080/api/board/update-comment/${editingCommentId}`, {
+      const response = await fetch(`http://13.237.172.212:8080/api/board/update-comment/${editingCommentId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ const AdminBoardDetail = () => {
 
   const handleCommentDelete = async (commentId) => {
     try {
-      const response = await fetch(`http://3.106.45.125:8080/api/board/delete-comment/${commentId}`, {
+      const response = await fetch(`http://13.237.172.212:8080/api/board/delete-comment/${commentId}`, {
         method: 'DELETE',
       });
 
