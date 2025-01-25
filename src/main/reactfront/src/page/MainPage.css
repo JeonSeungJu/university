@@ -16,11 +16,13 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  margin-bottom: 0; /* 이미지 하단 여백 제거 */
 }
 
 .text-content {
   text-align: center;
   padding: 20px;
+  margin-top: 0; /* 텍스트 상단 여백 제거 */
 }
 
 .image-gallery {
