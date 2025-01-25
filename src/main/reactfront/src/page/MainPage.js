@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './MainPage.css'; // 스타일 파일을 import
 import { useSelector } from 'react-redux';
 import ReviewCardSlider from '../components/ReviewCardSlider';
+import './ConsultButtons.css';
 
 const MainPage = () => {
   // Redux에서 로그인 상태를 가져오기
@@ -33,6 +34,20 @@ const MainPage = () => {
   return (
     <div className="main-container">
       <img src="main.png" alt="Main Image" className="main-image" />
+          <div className="consult-buttons-container">
+            <button className="consult-button yellow">
+              <span role="img" aria-label="chat">
+                💬
+              </span>{' '}
+              채팅상담 바로가기
+            </button>
+            <button className="consult-button blue">
+              <span role="img" aria-label="phone">
+                📞
+              </span>{' '}
+              전화상담 바로가기
+            </button>
+          </div>
       <div className="text-content">
         <h2>Study With Us!</h2>
         <p>다양한 전공학위나 자격이 필요하신 “직장인”</p>
