@@ -54,21 +54,34 @@ body {
 
 .image-gallery {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between; /* 간격 균등 배분 */
+  align-items: flex-start; /* 이미지와 텍스트 정렬 */
+  gap: 30px; /* 각 항목 간의 간격 */
   padding: 20px;
-  overflow-x: auto; /* 가로 스크롤 필요시 허용 */
+}
+
+.gallery-item {
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  max-width: 200px; /* 최대 너비 제한 */
 }
 
 .gallery-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+  width: 180px; /* 이미지 크기 조정 */
+  height: 120px;
+  object-fit: cover; /* 이미지를 비율에 맞게 잘라냄 */
+  border-radius: 8px; /* 이미지 모서리를 둥글게 */
   transition: transform 0.3s ease;
 }
 
 .gallery-image:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* 마우스 오버 시 확대 효과 */
+}
+
+.gallery-text {
+  margin-top: 10px; /* 텍스트와 이미지 간격 */
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
 }
 
 .info-section {

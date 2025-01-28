@@ -58,11 +58,24 @@ const MainPage = () => {
          <p>모두 <strong>“스터디어스”</strong>와 함께 성공하였습니다</p>
        </div>
       <div className="image-gallery">
-        <img src="image1.jpg" alt="Gallery Image 1" className="gallery-image" />
-        <img src="image2.jpg" alt="Gallery Image 2" className="gallery-image" />
-        <img src="image3.jpg" alt="Gallery Image 3" className="gallery-image" />
-        <img src="image4.jpg" alt="Gallery Image 4" className="gallery-image" />
+        <div className="gallery-item">
+          <img src="1.jpg" alt="Gallery Image 1" className="gallery-image" />
+          <p className="gallery-text">언제 어디서나 온라인 수강 가능!<br />직장에서, 학원에서, 집에서도<br />간편한 모바일 수강으로!</p>
+        </div>
+        <div className="gallery-item">
+          <img src="2.jpg" alt="Gallery Image 2" className="gallery-image" />
+          <p className="gallery-text">1:1 전문 담당 튜터 배정<br />개인번호 24시간 / 365일 밀착</p>
+        </div>
+        <div className="gallery-item">
+          <img src="3.jpg" alt="Gallery Image 3" className="gallery-image" />
+          <p className="gallery-text">요점 정리 가이드 파일 제공<br />대학과정이 처음이라도 문제없이<br />이수할 수 있게 다양한 참고자료 제공!</p>
+        </div>
+        <div className="gallery-item">
+          <img src="4.jpg" alt="Gallery Image 4" className="gallery-image" />
+          <p className="gallery-text">원하는 전공 모두 이수 가능!<br />공학과목이 없는 온라인에서도<br />학위 취득 가능!</p>
+        </div>
       </div>
+
       {/* ReviewCardSlider 컴포넌트 추가 */}
       <ReviewCardSlider />
     </div>
