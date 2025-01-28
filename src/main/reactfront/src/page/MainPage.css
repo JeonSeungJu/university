@@ -23,6 +23,26 @@ body {
   text-align: center;
   padding: 20px;
   margin-top: 0; /* 텍스트 상단 여백 제거 */
+  font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+}
+
+.text-content h2 {
+  font-size: 36px; /* 제목 크기 설정 */
+  font-weight: bold; /* 제목 굵게 */
+  color: #005a8b; /* 제목 색상 */
+  margin-bottom: 20px; /* 제목과 본문 사이 여백 */
+}
+
+.text-content p {
+  font-size: 18px; /* 본문 텍스트 크기 */
+  line-height: 1.6; /* 줄 간격 */
+  color: #333; /* 본문 색상 */
+  margin: 5px 0; /* 본문 텍스트 상하 여백 */
+}
+
+.text-content p strong {
+  color: #005a8b; /* 강조 텍스트 색상 */
+  font-weight: bold; /* 강조 텍스트 굵게 */
 }
 
 .image-gallery {

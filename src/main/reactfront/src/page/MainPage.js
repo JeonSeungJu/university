@@ -48,14 +48,14 @@ const MainPage = () => {
               전화상담 바로가기
             </button>
           </div>
-      <div className="text-content">
-        <h2>Study With Us!</h2>
-        <p>다양한 전공학위나 자격이 필요하신 “직장인”</p>
-        <p>공부에 공부를 하며 편입학을 준비하는 “대학생”</p>
-        <p>개인사정으로 입대를 미뤄야 하는 “대한민국 청년”</p>
-        <p>“캐나다 이민”을 위한 ECE학습자 분들까지</p>
-        <p>모두 “스터디어스”와 함께 성공하였습니다</p>
-      </div>
+        <div className="text-content">
+          <h2>Study With Us!</h2>
+          <p>다양한 전공학위나 자격이 필요하신 <strong>“직장인”</strong></p>
+          <p>공부에 공부를 하며 편입학을 준비하는 <strong>“대학생”</strong></p>
+          <p>개인사정으로 입대를 미뤄야 하는 <strong>“대한민국 청년”</strong></p>
+          <p><strong>“캐나다 이민”</strong>을 위한 ECE학습자 분들까지</p>
+          <p>모두 <strong>“스터디어스”</strong>와 함께 성공하였습니다</p>
+        </div>
       <div className="image-gallery">
         <img src="image1.jpg" alt="Gallery Image 1" className="gallery-image" />
         <img src="image2.jpg" alt="Gallery Image 2" className="gallery-image" />
