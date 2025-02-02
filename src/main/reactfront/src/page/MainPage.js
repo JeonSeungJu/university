@@ -81,6 +81,7 @@ const MainPage = () => {
         </div>
 
 
+
       {/* ReviewCardSlider 컴포넌트 추가 */}
       <ReviewCardSlider />
     </div>

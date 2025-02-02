@@ -54,33 +54,38 @@ body {
 
 .image-gallery {
   display: flex;
-  justify-content: center; /* 가운데 정렬 */
-  align-items: center; /* 수직 정렬 */
-  gap: 50px; /* 항목 간격을 넓게 설정 */
+  justify-content: center; /* 갤러리를 중앙 정렬 */
+  align-items: flex-start; /* 이미지와 텍스트 정렬 */
+  gap: 40px; /* 항목 간 간격 */
   padding: 40px 20px;
+  max-width: 1200px; /* 전체 갤러리 너비 제한 */
+  margin: 0 auto; /* 중앙 정렬 */
 }
 
 .gallery-item {
   text-align: center;
-  max-width: 250px; /* 각 아이템의 최대 너비 */
+  max-width: 250px; /* 각 아이템 너비 제한 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallery-image {
-  width: 220px; /* 이미지 크기 */
+  width: 220px; /* 이미지 크기 조정 */
   height: 140px;
-  object-fit: cover; /* 비율을 유지한 채로 크롭 */
+  object-fit: cover; /* 비율 유지하며 크롭 */
   border-radius: 10px; /* 둥근 모서리 */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
 .gallery-image:hover {
-  transform: scale(1.05); /* 마우스 오버 시 약간 확대 */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* 확대 시 그림자 강화 */
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-text {
-  margin-top: 15px; /* 이미지와 텍스트 간격 */
+  margin-top: 10px; /* 이미지와 텍스트 간격 */
   font-size: 16px;
   color: #333;
   line-height: 1.6;
@@ -89,11 +94,12 @@ body {
 }
 
 .divider {
-  width: 20px;
+  width: 30px;
   height: 2px;
-  background-color: #005a8b; /* 강조 색상 */
-  margin: 10px auto; /* 가운데 정렬 */
+  background-color: #005a8b;
+  margin: 10px auto;
 }
+
 
 .info-section {
   display: flex;
