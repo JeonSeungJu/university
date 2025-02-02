@@ -52,37 +52,47 @@ body {
   font-style: italic; /* 기울임체 적용 */
 }
 
-
 .image-gallery {
   display: flex;
-  justify-content: space-between; /* 간격 균등 배분 */
-  align-items: flex-start; /* 이미지와 텍스트 정렬 */
-  gap: 30px; /* 각 항목 간의 간격 */
-  padding: 20px;
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center; /* 수직 정렬 */
+  gap: 50px; /* 항목 간격을 넓게 설정 */
+  padding: 40px 20px;
 }
 
 .gallery-item {
-  text-align: center; /* 텍스트를 중앙 정렬 */
-  max-width: 200px; /* 최대 너비 제한 */
+  text-align: center;
+  max-width: 250px; /* 각 아이템의 최대 너비 */
 }
 
 .gallery-image {
-  width: 180px; /* 이미지 크기 조정 */
-  height: 120px;
-  object-fit: cover; /* 이미지를 비율에 맞게 잘라냄 */
-  border-radius: 8px; /* 이미지 모서리를 둥글게 */
-  transition: transform 0.3s ease;
+  width: 220px; /* 이미지 크기 */
+  height: 140px;
+  object-fit: cover; /* 비율을 유지한 채로 크롭 */
+  border-radius: 10px; /* 둥근 모서리 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .gallery-image:hover {
-  transform: scale(1.1); /* 마우스 오버 시 확대 효과 */
+  transform: scale(1.05); /* 마우스 오버 시 약간 확대 */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* 확대 시 그림자 강화 */
 }
 
 .gallery-text {
-  margin-top: 10px; /* 텍스트와 이미지 간격 */
-  font-size: 14px;
+  margin-top: 15px; /* 이미지와 텍스트 간격 */
+  font-size: 16px;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 220px; /* 텍스트 최대 너비 */
+}
+
+.divider {
+  width: 20px;
+  height: 2px;
+  background-color: #005a8b; /* 강조 색상 */
+  margin: 10px auto; /* 가운데 정렬 */
 }
 
 .info-section {
