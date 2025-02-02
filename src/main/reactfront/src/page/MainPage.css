@@ -68,6 +68,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 320px; /* 모든 항목의 최소 높이 동일하게 설정 */
 }
 
 .gallery-image {
@@ -91,6 +92,7 @@ body {
   line-height: 1.6;
   font-weight: 500;
   max-width: 220px; /* 텍스트 최대 너비 */
+  min-height: 100px; /* 모든 텍스트 영역 높이 동일하게 설정 */
 }
 
 .divider {
@@ -99,6 +101,7 @@ body {
   background-color: #005a8b;
   margin: 10px auto;
 }
+
 
 
 .info-section {
