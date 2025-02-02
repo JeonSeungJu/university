@@ -49,6 +49,7 @@ body {
 .text-content p strong {
   color: #005a8b; /* 강조 텍스트 색상 */
   font-weight: bold; /* 강조 텍스트 굵게 */
+  font-style: italic; /* 기울임체 적용 */
 }
 
 
