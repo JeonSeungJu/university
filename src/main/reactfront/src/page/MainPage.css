@@ -124,3 +124,42 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item img {
+  width: 200px;
+  height: 140px;
+  border-radius: 8px;
+}
+
+.card-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.card-background {
+  position: absolute;
+  inset: 0;
+  height: 64px;
+  background: url('/background.jpg') center/cover;
+  filter: blur(8px);
+}
+
+.card-content {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
