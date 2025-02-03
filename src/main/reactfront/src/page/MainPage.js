@@ -79,6 +79,40 @@ const MainPage = () => {
             <p className="gallery-text">원하는 전공 모두 이수 가능!<br />공학과목이 없는 온라인에서도<br />학위 취득 가능!</p>
           </div>
         </div>
+    <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/backgrond.jpg')" }}>
+
+      {/* 카드 섹션 (고정된 위치) */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-8">
+        <Card
+          icon="/education-icon.png"
+          title="교육과정"
+          description="온/오프라인을 통해 어떤 비전을 이루고 싶으신가요? 알맞은 교육 과정 및 필요한 과정을 소개드립니다."
+          buttonText="자세히 보기"
+          buttonColor="bg-blue-600 hover:bg-blue-700"
+        />
+        <Card
+          icon="/review-icon.png"
+          title="수강후기"
+          description="스터디어스와 함께 진행한 이후, 성공적으로 목표를 달성하신 분들의 생생한 후기를 확인해보세요."
+          buttonText="자세히 보기"
+          buttonColor="bg-purple-600 hover:bg-purple-700"
+        />
+      </div>
+
+      {/* 하단 텍스트 및 갤러리 */}
+      <div className="relative z-10 text-center mt-96">
+        <h1 className="text-4xl font-bold text-white">스터디어스와</h1>
+        <h2 className="text-2xl text-white">Study With Us!</h2>
+        <p className="text-lg text-white mt-4">다양한 전공학위나 자격이 필요하신 <strong>“직장인”</strong></p>
+
+        <div className="image-gallery mt-10 flex justify-center gap-4">
+          {[1, 2, 3, 4].map((num) => (
+            <div key={num} className="gallery-item">
+              <img src={`${num}.jpg`} alt={`Gallery ${num}`} className="w-64 h-40 rounded-lg shadow-lg" />
+            </div>
+          ))}
+        </div>
+      </div>
 
 
 
