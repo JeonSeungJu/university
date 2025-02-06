@@ -103,47 +103,41 @@ body {
   right: 0;
 }
 
-/* 배경 위 컨텐츠 */
 .overlay-content {
   display: flex;
-  gap: 30px;
-  background: rgba(255, 255, 255, 0.9); /* 반투명 흰색 */
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  width: 80%; /* 적절한 크기로 조정 */
-  max-width: 1200px; /* 너무 커지지 않도록 제한 */
+  gap: 40px; /* 카드 간 간격 */
+  position: relative; /* 부모 요소를 기준으로 정렬 */
 }
 
-/* 텍스트 박스 */
+/* 개별 카드 스타일 */
 .content-box {
   background: white;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 10px;
   text-align: center;
-  width: 280px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-}
-.content-box h3 {
-  font-size: 20px;
-  color: #005a8b;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2; /* 배경보다 위에 배치 */
 }
 
-.content-box p {
-  font-size: 14px;
-  color: #333;
+/* 카드 아래쪽 강조 색상 */
+.content-box::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* 박스보다 조금 아래로 내려감 */
+  left: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 0 0 10px 10px;
+  z-index: -1;
 }
 
-.content-box button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  border: none;
-  background: #0084ff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+/* 개별 카드 색상 */
+.content-box:nth-child(1)::after {
+  background: #16697A; /* 첫 번째 카드 하단 색상 */
 }
 
-.content-box button:hover {
-  background: #005a8b;
+.content-box:nth-child(2)::after {
+  background: #34568B; /* 두 번째 카드 하단 색상 */
 }

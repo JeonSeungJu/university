@@ -81,19 +81,21 @@ const MainPage = () => {
         </div>
     <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/backgrond.jpg')" }}>
     <div className="background-section">
-      <div className="overlay-content">
-        <div className="content-box">
-          <h3>교육과정</h3>
-          <p>온·오프라인 강의를 통해 비전을 알고 싶은 수강자들을 위한 맞춤 코스</p>
-          <button>자세히 보기</button>
-        </div>
-        <div className="content-box">
-          <h3>수강후기</h3>
-          <p>스터디어스를 경험한 학생들의 생생한 수강 후기를 확인해 보세요.</p>
-          <button>자세히 보기</button>
-        </div>
+  <div className="overlay-content">
+    <div className="content-box">
+      <h3>📜 교육과정</h3>
+      <p>온·오프라인을 통해 어떤 비전을 이루고 싶으신가요?  
+        알맞은 교육 과정 및 필요한 과정을 소개드립니다.</p>
+      <button>자세히 보기</button>
+    </div>
+      <div className="content-box">
+        <h3>💬 수강후기</h3>
+        <p>스터디어스와 함께 진행한 이후, 성공적으로 목표를 달성하신  
+          분들의 생생한 후기를 확인해보세요.</p>
+        <button>자세히 보기</button>
       </div>
     </div>
+  </div>
 </div>
     </div>
   );
