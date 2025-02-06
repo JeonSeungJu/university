@@ -72,16 +72,16 @@ const MainPage = () => {
       <div className="overlay-content">
         <div className="content-box">
           <h3>교육과정</h3>
-          <p>교육과정은 전문성을 높여주는 과정으로, 수강생들의 미래를 더욱 밝게 합니다.</p>
+          <p>온·오프라인 강의를 통해 비전을 알고 싶은 수강자들을 위한 맞춤 코스</p>
           <button>자세히 보기</button>
         </div>
         <div className="content-box">
           <h3>수강후기</h3>
-          <p>스터디어스를 경험한 학생들의 진솔한 후기를 확인해 보세요.</p>
+          <p>스터디어스를 경험한 학생들의 생생한 수강 후기를 확인해 보세요.</p>
           <button>자세히 보기</button>
         </div>
       </div>
-      </div>
+     </div>
    </div>
  );
 };
