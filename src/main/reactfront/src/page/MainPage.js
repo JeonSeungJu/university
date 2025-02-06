@@ -80,27 +80,21 @@ const MainPage = () => {
           </div>
         </div>
     <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/backgrond.jpg')" }}>
-
-      {/* 카드 섹션 (고정된 위치) */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-8">
-        <Card
-          icon="/education-icon.png"
-          title="교육과정"
-          description="온/오프라인을 통해 어떤 비전을 이루고 싶으신가요? 알맞은 교육 과정 및 필요한 과정을 소개드립니다."
-          buttonText="자세히 보기"
-          buttonColor="bg-blue-600 hover:bg-blue-700"
-        />
-        <Card
-          icon="/review-icon.png"
-          title="수강후기"
-          description="스터디어스와 함께 진행한 이후, 성공적으로 목표를 달성하신 분들의 생생한 후기를 확인해보세요."
-          buttonText="자세히 보기"
-          buttonColor="bg-purple-600 hover:bg-purple-700"
-        />
+    <div className="background-section">
+      <div className="overlay-content">
+        <div className="content-box">
+          <h3>교육과정</h3>
+          <p>온·오프라인 강의를 통해 비전을 알고 싶은 수강자들을 위한 맞춤 코스</p>
+          <button>자세히 보기</button>
+        </div>
+        <div className="content-box">
+          <h3>수강후기</h3>
+          <p>스터디어스를 경험한 학생들의 생생한 수강 후기를 확인해 보세요.</p>
+          <button>자세히 보기</button>
+        </div>
       </div>
-      </div>
-      {/* ReviewCardSlider 컴포넌트 추가 */}
-      <ReviewCardSlider />
+  </div>
+</div>
     </div>
   );
 };
