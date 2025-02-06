@@ -93,7 +93,7 @@ const MainPage = () => {
           <button>자세히 보기</button>
         </div>
       </div>
-  </div>
+    </div>
 </div>
     </div>
   );
