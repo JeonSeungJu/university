@@ -85,34 +85,46 @@ body {
   color: #333;
   max-width: 220px;
 }
+/* 카드 섹션을 감싸는 배경 이미지 컨테이너 */
+.cards-wrapper {
+  width: 100%;
+  height: 400px; /* 배경 섹션의 높이 */
+  background-image: url('/background.jpg'); /* 배경 이미지 경로 */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
 
 /* 카드 컨테이너 */
 .cards-container {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 60px;
+  background: white; /* 흰색 배경 */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
   width: 80%;
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 .card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   width: 300px;
 }
 
-.card-icon {
-  width: 50px;
-  height: 50px;
+.card img {
+  width: 60px;
+  height: 60px;
 }
 
 .card h3 {
-  font-size: 22px;
   margin-top: 10px;
+  font-size: 22px;
 }
 
 .card p {
@@ -123,12 +135,14 @@ body {
 
 .card-button {
   display: inline-block;
-  padding: 10px 20px;
   margin-top: 10px;
+  padding: 10px 15px;
   background: #005a8b;
   color: white;
-  font-weight: bold;
+  text-decoration: none;
   border-radius: 8px;
+  font-weight: bold;
+  border: none;
   cursor: pointer;
   transition: background 0.3s;
 }

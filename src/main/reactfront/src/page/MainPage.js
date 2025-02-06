@@ -70,21 +70,22 @@ const MainPage = () => {
      </div>
 
      {/* 카드 섹션 */}
-     <div className="cards-container">
-       <div className="card">
-         <img src="/education-icon.png" alt="교육과정" className="card-icon" />
-         <h3>교육과정</h3>
-         <p>온/오프라인을 통해 어떤 비전을 이루고 싶으신가요? 알맞은 교육 과정 및 필요한 과정을 소개드립니다.</p>
-         <button className="card-button">자세히 보기</button>
-       </div>
-       <div className="card">
-         <img src="/review-icon.png" alt="수강후기" className="card-icon" />
-         <h3>수강후기</h3>
-         <p>스터디어스와 함께 진행한 이후, 성공적으로 목표를 달성하신 분들의 생생한 후기를 확인해보세요.</p>
-         <button className="card-button">자세히 보기</button>
-       </div>
-     </div>
-
+    <div className="cards-wrapper">
+         <div className="cards-container">
+           <div className="card">
+             <img src="/education-icon.png" alt="교육과정" className="card-icon" />
+             <h3>교육과정</h3>
+             <p>온/오프라인을 통해 어떤 비전을 이루고 싶으신가요? 알맞은 교육 과정 및 필요한 과정을 소개드립니다.</p>
+             <button className="card-button">자세히 보기</button>
+           </div>
+           <div className="card">
+             <img src="/review-icon.png" alt="수강후기" className="card-icon" />
+             <h3>수강후기</h3>
+             <p>스터디어스와 함께 진행한 이후, 성공적으로 목표를 달성하신 분들의 생생한 후기를 확인해보세요.</p>
+             <button className="card-button">자세히 보기</button>
+           </div>
+         </div>
+         </div>
    </div>
  );
 };
